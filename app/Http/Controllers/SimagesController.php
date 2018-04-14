@@ -95,6 +95,9 @@ class SimagesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $simage = Simage::find($id);
+        $simage->delete();
+
+        return redirect()->route('simages.index');
     }
 }
