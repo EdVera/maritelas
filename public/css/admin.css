@@ -1,13 +1,13 @@
 .side-nav{
   background: #f3357f;
   /*[Background color]*/
-  background: -moz-linear-gradient(top, #f3357f 0%, #fff 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, #f3357f), color-stop(100%, #fff));
-  background: -webkit-linear-gradient(top, #f3357f 0%, #fff 100%);
-  background: -o-linear-gradient(top, #f3357f 0%, #fff 100%);
-  background: -ms-linear-gradient(top, #f3357f 0%, #fff 100%);
-  background: linear-gradient(to bottom, #f3357f 0%, #fff 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3357f', endColorstr='#fff', GradientType=0 );
+  background: -moz-linear-gradient(top, #fff 0%, #f3357f 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #f3357f), color-stop(100%, #f3357f));
+  background: -webkit-linear-gradient(top, #fff 0%, #f3357f 100%);
+  background: -o-linear-gradient(top, #fff 0%, #f3357f 100%);
+  background: -ms-linear-gradient(top, #fff 0%, #f3357f 100%);
+  background: linear-gradient(to bottom, #fff 0%, #f3357f 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#f3357f', GradientType=0 );
   /*End [Background color]*/
 }
 

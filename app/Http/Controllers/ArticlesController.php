@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Article;
+use App\ArticleImage;
+
 class ArticlesController extends Controller
 {
     /**
@@ -13,7 +16,8 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        //
+        $articles = Article::all();
+        return view('admin.articles.index')->with('articles',$articles);
     }
 
     /**
@@ -23,7 +27,7 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.articles.create');
     }
 
     /**
@@ -34,7 +38,36 @@ class ArticlesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $aux = 0;
+
+      $article = new Article($request->all());
+
+      if ($request->hasFile('cover')) {
+        $name = 'maritelas_'. $aux . time() . '.' . $request->cover->getClientOriginalExtension();
+        $path = public_path() . '/img/articles/';
+        $request->cover->move($path, $name);
+        $artcile->image = $name;
+      }
+
+      $article->save();
+
+      if ($request->hasFile('images')) {
+        foreach ($request->images as $file) {
+          //$file = $request->file('image');
+          $aux++;
+          $name = 'maritelas_'. $aux . time() . '.' . $file->getClientOriginalExtension();
+          $path = public_path() . '/img/articles/';
+          $file->move($path, $name);
+
+          $img = new ArticleImage();
+          $img->name = $name;
+          $img->article_id=$article->id;
+          $img->save();
+        }
+      }
+
+      return redirect()->route('articles.create');
+
     }
 
     /**

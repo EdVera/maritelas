@@ -1,0 +1,64 @@
+.nobottom{
+  margin-bottom: 0;
+}
+
+.banner{
+	background-color:#f3357f;
+  color: white;
+  font-weight: 900;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.banner h1{
+  font-size: 35px;
+  margin: 1.1rem 0;
+}
+
+.socialnav {
+   padding: 15px;
+   font-size: 30px;
+   width: 60px;
+   height: 60px;
+   text-align: center;
+   text-decoration: none;
+   margin: 5px 5px;
+   border-radius: 50%;
+   background-color: #f3357f;
+   color: white;
+}
+.socialfooter {
+   padding: 15px;
+   font-size: 30px;
+   width: 60px;
+   height: 60px;
+   text-align: center;
+   text-decoration: none;
+   margin: 5px 5px;
+   border-radius: 50%;
+   color: #f3357f;
+   background-color: white;
+}
+
+/* background-color */
+
+.input-field input[type=text], .input-field input[type=email]{
+  background-color: white;
+  margin: 0 0 -10px 0;
+}
+
+#contactform .row .col{
+  padding: 0px 5px;
+}
+
+#contactform .row .col .but{
+  padding: 0px 5px;
+}
+
+#contactsection p{
+  color: #5d5d5d;
+}
+
+#contactsection i{
+  color: #5d5d5d;
+}

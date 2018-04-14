@@ -20,11 +20,13 @@ class HomeController extends Controller
     {
         $courses = Course::all();
         $products = Product::all();
-        $cover = Course::find(1);
+        $covers = Simage::all();
+
+        // dd($cover);
         return view('site.welcome')
           ->with('courses',$courses)
           ->with('products',$products)
-          ->with('cover',$cover);
+          ->with('covers',$covers);
     }
 
     /**

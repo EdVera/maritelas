@@ -8,7 +8,7 @@
 
 	<div class="row">
 		<div class="col s9">
-			<caption><h4>Slider</h4></caption>
+			<caption><h4>Cover</h4></caption>
 		</div>
 		<div class="col s3 right-align valign-wrapper">
 			<h4>

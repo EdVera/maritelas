@@ -55,6 +55,12 @@ Route::group(['prefix' => 'admin'], function() {
 			'as' 	=>	'products.destroy'
 		]);
 
+	Route::resource('articles','ArticlesController');
+	Route::get('articles/{id}/destroy', [
+			'uses'	=>	'ArticlesController@destroy',
+			'as' 	=>	'articles.destroy'
+		]);
+
 });
 
 // Route::group(['prefix' => 'contact', 'as' => 'contact.'], function () {

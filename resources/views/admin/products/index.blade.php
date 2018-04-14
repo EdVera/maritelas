@@ -2,7 +2,7 @@
 @section('css')
 
 @endsection
-@section('title','Slider')
+@section('title','Productos')
 
 @section('content-fieldset')
 
