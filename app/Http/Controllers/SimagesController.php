@@ -43,13 +43,14 @@ class SimagesController extends Controller
           $name = 'maritelas' . time() . '.' . $file->getClientOriginalExtension();
           $path = public_path() . '/img/slider/';
           $file->move($path, $name);
+
+          $image = new Simage;
+          $image->name = $name;
+          $image->title = $request->title;
+          $image->subtitle = $request->subtitle;
+          $image->save();
         }
 
-        $image = new Simage;
-        $image->name = $name;
-        $image->title = $request->title;
-        $image->subtitle = $request->subtitle;
-        $image->save();
         return redirect()->route('home');
     }
 

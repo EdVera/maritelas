@@ -23,18 +23,13 @@
 <!-- START PAGE -->
 
 <!-- [Cover]-->
-<div class="parallax-container" style="height:67vh">
-  <div class="parallax w3-container-display">
-    @foreach ($covers as $cover)
-      @if ($loop->last)
-        <img src="{{ asset('img/slider/'.$cover->name) }}">
-        <div class="w3-display-middle" style="width:100%">
-          <h1 class="center" style="color:white">{{ $cover->title }}</h1>
-          <h3 class="center" style="color:white;font-weight:100">{{ $cover->subtitle }}</h3>
-        </div>
-      @endif
-    @endforeach
-  </div>
+<div id="slider">
+  @foreach ($covers as $cover)
+    <div class="valign-wrapper" style="height:67vh;background-image: url('{{ asset('img/slider/'.$cover->name) }}'); background-size:cover">
+      <h1 style="color:white">{{ $cover->title }}</h1>
+      <h3 style="color:white">{{ $cover->subtitle }}</h3>
+    </div>
+  @endforeach
 </div>
 <!-- End [Cover] -->
 
@@ -81,29 +76,46 @@
 
 <!-- [Courses]-->
 <div class="section bg" style="padding: 50px 0">
-  <div class="container">
+  <div id="courses" class="container">
     <div class="row">
+      @php
+        $i=1;
+      @endphp
       @foreach ($courses as $course)
-        <div class="col s10 offset-s1 m4">
-          <div class="card">
-            <div class="card-image">
-              <img src="{{ asset('img/courses/' . $course->image) }}">
-            </div>
-            <div class="card-content">
-              <h3 class="center">{{ $course->name }}</h3>
-              <p>
-                {{ $course->description }}
-              </p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
+        @if ($i<4)
+          <div class="col s10 offset-s1 m4">
+            <div class="card">
+              <div class="card-image">
+                <img src="{{ asset('img/courses/' . $course->image) }}">
+              </div>
+              <div class="card-content">
+                <h3 class="center">{{ $course->name }}</h3>
+                <p>
+                  {{ $course->description }}
+                </p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+              </div>
             </div>
           </div>
-        </div>
+          @if($i==3)
+            </div>
+            <div class="row">
+            @php
+            $i=0;
+            @endphp
+          @else
+            @php
+            $i++;
+            @endphp
+          @endif
+        @endif
       @endforeach
     </div>
   </div>
 </div>
+
 <!-- End [Courses] -->
 
 <!-- [Product banner]-->
@@ -296,16 +308,18 @@
             <div class="col s12 m6 input-field but">
               <button class="btn-flat transparent" type="submit" style="width:100%;color:#f3357f;font-weight:100;border:1px solid #f3357f; padding: 2px 2px;height:40px">¡COMENZAR AHORA!</button>
             </div>
-            <a href="#" class="col s12 m6" style="padding:2px 20px;background-color: #80c357;margin-top:14px">
-              <div class="row valign-wrapper nobottom">
-                <div class="col s2">
-                  <i class="fa fa-whatsapp fa-2x" style="color:white"></i>
+            <div class="col s12 m6" style="margin-top:14px">
+              <a href="#" >
+                <div class="row valign-wrapper nobottom" style="background-color: #80c357;">
+                  <div class="col s2">
+                    <i class="fa fa-whatsapp fa-2x" style="color:white"></i>
+                  </div>
+                  <div class="col s10">
+                    <p style="text-align: center;font-size: 13px;font-weight:100;color:white;margin:0"><span style="font-weight:900">WHATSAPP</span><br> (442)3773461</p>
+                  </div>
                 </div>
-                <div class="col s10">
-                  <p style="text-align: center;font-size: 13px;font-weight:100;color:white;margin:0"><span style="font-weight:900">WHATSAPP</span><br> (442)3773461</p>
-                </div>
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
         </form>
       </div>
@@ -324,6 +338,16 @@
 @section('addScripts')
   <script type="text/javascript">
     $('.marcas').slick({
+      infinite: true,
+      accessibility:true
+    });
+
+    $('#slider').slick({
+      infinite: true,
+      accessibility:true
+    });
+
+    $('#courses').slick({
       infinite: true,
       accessibility:true
     });
