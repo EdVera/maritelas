@@ -16,6 +16,12 @@
       left: 30px;
       z-index: 99;
     }
+
+    #slider .slick-prev:before,
+    #slider .slick-next:before
+    {
+        color: #fff;
+    }
   </style>
 @endsection
 
@@ -69,85 +75,95 @@
 <!-- End [Social] -->
 
 <!-- [Courses banner]-->
-<div id="productos" class="section banner">
+<div id="cursos" class="section banner">
   <h1 class="center-align">¡CURSOS PENSADOS PARA TI!</h1>
 </div>
 <!-- End [Courses banner] -->
 
 <!-- [Courses]-->
-<div class="section bg" style="padding: 50px 0">
+
+<div class="section bg">
   <div id="courses" class="container">
-    <div class="row">
-      @php
-        $i=1;
-      @endphp
       @foreach ($courses as $course)
-        @if ($i<4)
-          <div class="col s10 offset-s1 m4">
-            <div class="card">
-              <div class="card-image">
-                <img src="{{ asset('img/courses/' . $course->image) }}">
-              </div>
-              <div class="card-content">
-                <h3 class="center">{{ $course->name }}</h3>
-                <p>
-                  {{ $course->description }}
-                </p>
-              </div>
-              <div class="card-action">
-                <a href="#">This is a link</a>
-              </div>
-            </div>
+        <div class="card" style="margin-left:10px;margin-right:10px">
+          <div class="card-image">
+            <img src="{{ asset('img/courses/' . $course->image) }}" style="height:30vh">
           </div>
-          @if($i==3)
-            </div>
-            <div class="row">
-            @php
-            $i=0;
-            @endphp
-          @else
-            @php
-            $i++;
-            @endphp
-          @endif
-        @endif
+          <div class="card-content">
+            <h5 class="center" style="color:#f3357f">{{ $course->name }}</h5>
+            <p>
+              {{ $course->description }}
+            </p>
+          </div>
+          <div class="card-action">
+            <a href="#">This is a link</a>
+          </div>
+        </div>
       @endforeach
-    </div>
   </div>
 </div>
 
 <!-- End [Courses] -->
 
 <!-- [Product banner]-->
-<div id="cursos" class="section banner">
+<div id="productos" class="section banner">
   <h1 class="center-align">¡PRODUCTOS ÚNICOS!</h1>
 </div>
 <!-- End [Product banner] -->
 
 <!-- [Products]-->
 <div class="section bg">
-  <div class="container">
-    <div class="row">
-      @foreach ($products as $product)
-        <div class="col s10 offset-s1 m4">
-          <div class="card">
-            <div class="card-image activator waves-effect waves-block waves-light">
-              <img src="{{ asset('img/products/' . $product->image) }}">
-              <span class="card-title activator" style="color:white;background-color:rgba(248,51,124,.6);font-size:13px;width:100%">{{$product->name}}</span>
+  <div id="products" class="container">
+    <div class="">
+      <div class="row">
+        @php
+          $j=0;
+          $i=0;
+        @endphp
+        @foreach ($products as $product)
+          @if ($i<4)
+            <div class="col s10 offset-s1 m3">
+              <div class="card">
+                <div class="card-image activator waves-effect waves-block waves-light">
+                  <img src="{{ asset('img/products/' . $product->image) }}" style="height:30vh">
+                  <span class="card-title activator" style="color:white;background-color:rgba(248,51,124,.6);font-size:13px;width:100%">{{$product->name}}</span>
+                </div>
+                <div class="card-reveal" style="background-color: rgba(248,51,124,.9); color:white">
+                  <span class="card-title white-text" style="font-size:15px">{{$product->name}}<i class="material-icons right">close</i></span>
+                  <p class="center" style="font-size:13px">{{ $product->description }}.</p>
+                </div>
+              </div>
             </div>
-            <div class="card-reveal" style="background-color: rgba(248,51,124,.9); color:white">
-              <span class="card-title white-text">{{$product->name}}<i class="material-icons right">close</i></span>
-              <p class="center">{{ $product->description }}.</p>
-            </div>
-          </div>
-        </div>
-      @endforeach
-      <div class="col m4">
-
+            @if($i==3)
+              @if ($j==1)
+              </div>
+                </div>
+                <div class="">
+                  <div class="row">
+                  @php
+                    $i=0;
+                    $j=0;
+                  @endphp
+              @else
+                </div>
+                <div class="row">
+                @php
+                  $i=0;
+                  $j++;
+                @endphp
+              @endif
+            @else
+              @php
+                $i++;
+              @endphp
+            @endif
+          @endif
+        @endforeach
       </div>
     </div>
   </div>
 </div>
+
 <!-- End [Products] -->
 
 <!-- [Blog banner]-->
@@ -337,17 +353,36 @@
 
 @section('addScripts')
   <script type="text/javascript">
-    $('.marcas').slick({
-      infinite: true,
-      accessibility:true
-    });
 
     $('#slider').slick({
       infinite: true,
-      accessibility:true
+      accessibility:true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      prevArrow:"<button type='button' class='slick-prev' style='color:black'>Prev</button>",
+      nextArrow:"<button type='button' class='slick-next' style='color:blue'>Next</button>"
     });
 
     $('#courses').slick({
+      lazyLoad: 'progresive',
+      infinite: true,
+      accessibility:true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      prevArrow:"<button type='button' class='slick-prev' style='left:-50px'>Prev</button>",
+      nextArrow:"<button type='button' class='slick-next' style='right:-50px'>Next</button>"
+    });
+
+    $('#products').slick({
+      lazyLoad: 'progresive',
+      infinite: true,
+      accessibility:true,
+      prevArrow:"<button type='button' class='slick-prev' style='left:-50px'>Prev</button>",
+      nextArrow:"<button type='button' class='slick-next' style='right:-50px'>Next</button>"
+    });
+
+
+    $('.marcas').slick({
       infinite: true,
       accessibility:true
     });
