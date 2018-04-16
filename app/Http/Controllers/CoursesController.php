@@ -73,7 +73,8 @@ class CoursesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $course = Course::find($id);
+        return view('admin.courses.edit')->with('course',$course);
     }
 
     /**
@@ -85,7 +86,11 @@ class CoursesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $course = Course::find($id);
+      $course->fill($request->all());
+      $course->save();
+
+      return redirect()->route('courses.index');
     }
 
     /**

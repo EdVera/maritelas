@@ -35,7 +35,8 @@
   				<td>{{ $course->name }}</td>
           <td>{{ $course->description }}</td>
   				<td>
-  					<a href="{{ route('courses.destroy', $course->id) }}" class="btn red lighten-1"><i class="material-icons">delete</i></a>
+						<a href="{{ route('courses.edit', $course->id) }}" class="btn yellow darken-2"><i class="material-icons">edit</i></a>
+						<a href="{{ route('courses.destroy', $course->id) }}" class="btn red lighten-1"><i class="material-icons">delete</i></a>
   				</td>
   			</tr>
   			@endforeach
