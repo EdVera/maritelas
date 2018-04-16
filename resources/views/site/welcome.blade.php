@@ -31,9 +31,9 @@
 <!-- [Cover]-->
 <div id="slider">
   @foreach ($covers as $cover)
-    <div class="valign-wrapper" style="height:67vh;background-image: url('{{ asset('img/slider/'.$cover->name) }}'); background-size:cover">
-      <h1 style="color:white">{{ $cover->title }}</h1>
-      <h3 style="color:white">{{ $cover->subtitle }}</h3>
+    <div style="height:67vh;background-image: url('{{ asset('img/slider/'.$cover->name) }}'); background-size:cover">
+      <h1 class="center" style="color:white; font-size:50px; margin-top:25vh">{{ $cover->title }}</h1>
+      <h3 class="center" style="color:white; font-size:30px">{{ $cover->subtitle }}</h3>
     </div>
   @endforeach
 </div>
@@ -370,7 +370,35 @@
       slidesToShow: 3,
       slidesToScroll: 1,
       prevArrow:"<button type='button' class='slick-prev' style='left:-50px'>Prev</button>",
-      nextArrow:"<button type='button' class='slick-next' style='right:-50px'>Next</button>"
+      nextArrow:"<button type='button' class='slick-next' style='right:-50px'>Next</button>",
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
     });
 
     $('#products').slick({

@@ -27,39 +27,29 @@
   <!-- End little nav bar for desktop -->
 
   <!-- Little nav bar for mobil -->
-<div class="navbar-fixed hide-on-large-only">
-  <nav style="z-index: 4;" role="navigation" class="z-depth-0 " id="topnav-movil">
-    <div class="nav-wrapper">
-      <ul>
-        <li>
-          <a href="tel:4624201075" class="white-text">
-            <i class="fa fa-phone" style="font-size: 13px;"></i>
-          </a>
-        </li>
-        <li>
-          <a href="mailto:contacto@maritelascountry.com.mx?Subject=Hola" target="_top" class="white-text">
-            <i class="fa fa-envelope-o" style="font-size: 13px;"></i>
-          </a>
-        </li>
-        <li>
-          <a class="white-text" target="_blank" href="https://www.facebook.com/wtcqueretaro/">
-            <i class="fa fa-facebook-f" style="font-size: 13px;"></i>
-          </a>
-        </li>
-        <li>
-          <a class="white-text" target="_blank" href="https://www.linkedin.com/in/wtcqueretaro/" class="white-text">
-            <i class="fa fa-linkedin-square" style="font-size: 13px"></i>
-          </a>
-        </li>
-        <li>
-          <a class="white-text" target="_blank" href="https://www.instagram.com/wtcqro/">
-            <i class="fa fa-instagram" style="font-size: 13px"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
+  <div class="navbar-fixed hide-on-large-only" style="height: 40px">
+    <nav style="z-index: 4;height:40px" role="navigation" class="z-depth-0" id="topnavmovil">
+      <div class="nav-wrapper" height="40px">
+        <ul>
+          <li>
+            <a href="tel:4624201075" class="white-text">
+              <i style="font-size: 13px;" class="material-icons center">phone</i>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:contacto@maritelascountry.com.mx?Subject=Hola" target="_top" class="white-text">
+              <i style="font-size: 13px;" class="material-icons center ">mail</i>
+            </a>
+          </li>
+          <li>
+            <a class="white-text" target="_blank" href="https://www.facebook.com/wtcqueretaro/" style="font-size:10px">
+              ¡PONTE EN CONTACTO CON NOSOTROS!
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 
 <!-- Nav menu -->
 <!-- For desktop -->
@@ -69,7 +59,7 @@
       <a class="center" href="Home" id="menulogo">
         <img class="menulogo" src="{{ asset('img/logo/logo.png') }}">
       </a>
-      <a class="brand-logo center hide" href="Home" id="menupe">
+      <a class="brand-logo hide" href="Home" id="menupe">
         <img class="menupe" src="{{ asset('img/logo/simple.png') }}" class="hide">
       </a>
       <ul class="right" style="margin-right:50px">
@@ -108,10 +98,10 @@
   <nav class="z-depth-0" style="z-index: 4;" role="navigation" id="undernav-movil">
     <div class="nav-wrapper valign-wrapper ">
       <a href="#" data-activates="mobile-demo" class="button-collapse ">
-        <i class="material-icons white-text" id="iconmenumovil">menu</i>
+        <i class="material-icons black-text" id="iconmenumovil">menu</i>
       </a>
       <a href="Home">
-        <img src="{{ asset('img/logos/logomenumovilblanco.png') }}" class=" logonav" id="logocolormovil">
+        <img class="brand-logo center menulogomovil" src="{{ asset('img/logo/logo.png') }}" class=" logonav" id="logocolormovil">
       </a>
 
     </div>
@@ -121,11 +111,10 @@
 
 <!-- Collapsible menu for movil -->
 <ul class="side-nav collapsible" id="mobile-demo"  data-collapsible="accordion">
-  <li><a href="Home">Home</a></li>
-  <li><a href="Home">Home</a></li>
-  <li><a href="Home">Home</a></li>
-  <li><a href="Home">Home</a></li>
-  <li><a href="Home">Home</a></li>
-  <li><a href="Home">Home</a></li>
+  <li><a href="Home" style="letter-spacing:1px">INICIO</a></li>
+  <li><a href="Home" style="letter-spacing:1px">PRODUCTOS</a></li>
+  <li><a href="Home" style="letter-spacing:1px">BLOG</a></li>
+  <li><a href="Home" style="letter-spacing:1px">CURSOS</a></li>
+  <li><a href="Home" style="letter-spacing:1px">CONTACTO</a></li>
 </ul>
 <!-- End mobil navigation -->
