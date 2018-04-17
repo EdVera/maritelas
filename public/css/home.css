@@ -1,9 +1,8 @@
-
-
 .bottom-fixed{
 position: absolute;
 width: 100%;
 bottom: 10px;
+left:0px;
 }
 
 .slick-next{
@@ -20,31 +19,66 @@ bottom: 10px;
 #slider .slick-next:before
 {
     color: #fff;
+    font-size: 38px
+}
+
+#courses .slick-prev:before,
+#courses .slick-next:before
+{
+    font-size: 35px
 }
 
 #courses .slick-prev{
-  left: -30px !important;
+  left: -33px !important;
 
 }
 #courses .slick-next{
-  right: -30px !important;
+  right: -20px !important;
+}
+
+#products .slick-prev:before,
+#products .slick-next:before
+{
+    font-size: 35px
+}
+
+#products .slick-prev{
+  left: -33px !important;
+
+}
+#products .slick-next{
+  right: -20px !important;
+}
+
+#brands .slick-prev:before,
+#brands .slick-next:before
+{
+    font-size: 35px
+}
+
+#brands .slick-prev{
+  left: 12px !important;
+
+}
+#brands .slick-next{
+  right: 27px !important;
 }
 
 .slick-dots li button:before
 {
-    font-size: 16px;
-    line-height: 20px;
+  font-size: 16px;
+  line-height: 20px;
 
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 
-    opacity: .35;
-    color: white;
+  opacity: .35;
+  color: white;
 }
 .slick-dots li.slick-active button:before
 {
-    opacity: 1;
-    color: white;
+  opacity: 1;
+  color: white;
 }
 
 .slick-dotted.slick-slider{
@@ -70,10 +104,10 @@ bottom: 10px;
 }
 
 .socialnav {
-   padding: 15px;
+   padding: 5px;
    font-size: 30px;
-   width: 60px;
-   height: 60px;
+   width: 40px;
+   height: 40px;
    text-align: center;
    text-decoration: none;
    margin: 5px 5px;
@@ -85,8 +119,8 @@ bottom: 10px;
 .socialcourse {
    padding: 5px;
    font-size: 15px;
-   width: 25px;
-   height: 25px;
+   width: 38px;
+   height: 38px;
    text-align: center;
    text-decoration: none;
    margin: 5px 5px;
@@ -94,7 +128,6 @@ bottom: 10px;
    background-color: #f3357f;
    color: white;
 }
-
 
 .input-field input[type=text], .input-field input[type=email]{
   background-color: white;

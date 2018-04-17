@@ -24,33 +24,33 @@
 <!-- End [Cover] -->
 
 <!-- [Social]-->
-  <div class="row nobottom">
+  <div class="row nobottom" style="background-color:white">
     <div class="col s4" style="color:#f3357f;background-color:white">
       <div class="row nobottom valign-wrapper">
-        <div class="col s2">
-          <i class="fa fa-phone fa-2x socialnav"></i>
+        <div class="col s2" style="padding-right:0px">
+          <i class="fa fa-phone fa-2x socialnav" style="padding-top:7px"></i>
         </div>
-        <div class="col s10 center">
+        <div class="col s10 center" style="padding-left:0px">
           <p style="font-weight:100;font-size:13px"><span style="font-weight:900;font-size:13px">LLAMANOS</span><br> pregunta por nuestros cursos y productos.</p>
         </div>
       </div>
     </div>
     <div class="col s4" style="color:#f3357f;background-color:white">
       <div class="row nobottom valign-wrapper">
-        <div class="col s2">
-          <i class="fa fa-facebook fa-2x socialnav"></i>
+        <div class="col s2" style="padding-right:0px">
+          <i class="fa fa-facebook fa-2x socialnav" style="padding-top: 7px"></i>
         </div>
-        <div class="col s10 center">
+        <div class="col s10 center" style="padding-left:0px">
           <p style="font-weight:100;font-size:13px"><span style="font-weight:900;font-size:13px">FACEBOOK</span><br> registrate y pregunta por nuestros productos.</p>
         </div>
       </div>
     </div>
-    <div class="col s4" style="color:white;background-color:#80c357">
+    <div class="col s4" style="color:white;background-color:#80c357;padding-left:0">
       <div class="row nobottom valign-wrapper">
-        <div class="col s2">
-          <i class="fa fa-whatsapp fa-5x"></i>
+        <div class="col s2 right-align" style="padding-right:0px">
+          <i class="fa fa-whatsapp fa-3x center"></i>
         </div>
-        <div class="col s10 center">
+        <div class="col s10 center" style="padding-left:0px">
           <p style="font-weight:100;font-size:13px"><span style="font-weight:900;font-size:13px">WHATSAPP</span><br> registrate y pregunta por nuestros productos.</p>
         </div>
       </div>
@@ -79,8 +79,8 @@
               {{ $course->description }}
             </p>
             <div class="bottom-fixed center">
-              <a href="#"><i class="fa fa-phone socialcourse"></i></a>
-              <a href="#"><i class="fa fa-whatsapp socialcourse"></i></a>
+              <a href="#"><i class="fa fa-phone fa-2x socialcourse" style="font-size:1.75em;padding-top:7px"></i></a>
+              <a href="#"><i class="fa fa-whatsapp fa-2x socialcourse" style="padding-top:3px"></i></a>
             </div>
           </div>
         </div>
@@ -97,9 +97,9 @@
 <!-- End [Product banner] -->
 
 <!-- [Products]-->
-<div class="section bg">
+<div class="section bg" style="padding-top:0">
   <div id="products" style="margin:10px 50px">
-    <div class="">
+    <div class="" style="margin-top:38px">
       <div class="row">
         @php
           $j=0;
@@ -168,7 +168,7 @@
 
 <!-- [Brands]-->
 
-<div class="marcas">
+<div class="marcas" id="brands">
   <div>
     <div class="row nobottom valign-wrapper" style="padding:20px;background-color:white">
       <div class="col s4 m2">
@@ -307,13 +307,13 @@
           </div>
           <div class="row">
             <div class="col s12 m6 input-field but">
-              <button class="btn-flat transparent" type="submit" style="width:100%;color:#f3357f;font-weight:100;border:1px solid #f3357f; padding: 2px 2px;height:40px">¡COMENZAR AHORA!</button>
+              <button class="btn-flat transparent" type="submit" style="width:100%;color:#f3357f;font-weight:100;border:1px solid #f3357f; padding: 2px 2px;height:50px">¡COMENZAR AHORA!</button>
             </div>
-            <div class="col s12 m6" style="margin-top:14px">
-              <a href="#" >
-                <div class="row valign-wrapper nobottom" style="background-color: #80c357;">
+            <div class="col s12 m6" style="margin-top:14px;padding-right:0px">
+              <a href="#">
+                <div class="row valign-wrapper nobottom" style="background-color: #80c357;height:50px">
                   <div class="col s2">
-                    <i class="fa fa-whatsapp fa-2x" style="color:white"></i>
+                    <i class="fa fa-whatsapp fa-2x" style="color:white;font-size:2.6em"></i>
                   </div>
                   <div class="col s10">
                     <p style="text-align: center;font-size: 13px;font-weight:100;color:white;margin:0"><span style="font-weight:900">WHATSAPP</span><br> (442)3773461</p>

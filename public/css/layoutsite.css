@@ -11,7 +11,7 @@ img.menulogomovil{
 
 img.menulogo{
   height:60px;
-  margin-top:12px;
+  margin-top:8px;
   margin-left:50px;
 }
 img.menupe{
@@ -56,7 +56,7 @@ nav#topnavmovil i{
 
 nav#undernav{
   background-color: #fff;
-  height: 84px;
+  height: 76px;
 }
 
 nav#undernav a{
@@ -65,12 +65,12 @@ nav#undernav a{
 
 nav#undernav-movil{
   background-color: #fff;
-  height: 84px;
+  height: 76px;
 }
 
 .lh84{
-  line-height: 84px !important;
-  height: 84px;
+  line-height: 76px !important;
+  height: 76px;
   letter-spacing: 1px;
 }
 .lh60{

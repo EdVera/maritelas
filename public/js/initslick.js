@@ -4,8 +4,8 @@ $('#slider').slick({
   accessibility:true,
   autoplay: true,
   autoplaySpeed: 3000,
-  prevArrow:"<button type='button' class='slick-prev' style='color:black'>Prev</button>",
-  nextArrow:"<button type='button' class='slick-next' style='color:blue'>Next</button>"
+  prevArrow:"<button type='button' class='slick-prev' >Prev</button>",
+  nextArrow:"<button type='button' class='slick-next' >Next</button>"
 });
 
 $('#courses').slick({
