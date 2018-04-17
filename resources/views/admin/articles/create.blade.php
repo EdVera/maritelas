@@ -65,6 +65,12 @@
   			</div>
   		</div>
     </div>
+
+  	<div class="row">
+  		<div class="col s12 center">
+  			{!! Form::submit('Registrar',['class' => 'btn teal darken-1', 'style' => 'margin: auto']) !!}
+  		</div>
+  	</div>
     {!! Form::close() !!}
   </fieldset>
 
