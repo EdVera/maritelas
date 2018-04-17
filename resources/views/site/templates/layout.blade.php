@@ -9,10 +9,10 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	  <link href="{{ asset('css/w3.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
 	  <link href="{{ asset('plugins/materialize/css/materialize.min.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
-		<link href="{{ asset('css/layoutsite.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
-	  <link href="{{ asset('css/home.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
 		<link href="{{ asset('plugins/slick/slick-theme.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
 		<link href="{{ asset('plugins/slick/slick.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<link href="{{ asset('css/layoutsite.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<link href="{{ asset('css/home.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
 		<!-- JS  -->
 		<script src="{{ asset('plugins/fontawesome/fontawesome.min.js') }}"></script>
 		@yield('addCSS')
@@ -33,6 +33,7 @@
 		<script src="{{ asset('plugins/materialize/js/materialize.min.js') }}"></script>
 		<script src="{{ asset('js/init.js') }}"></script>
 		<script src="{{ asset('plugins/slick/slick.js') }}"></script>
+		<script src="{{ asset('js/initslick.js') }}"></script>
 		@yield('addScripts')
 	</body>
 </html>

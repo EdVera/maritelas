@@ -2,26 +2,10 @@
 
 @section('addCSS')
   <style media="screen">
-    body{
-      background-image: url('{{ asset('img/assets/background.jpg') }}');
-      background-size: 250px;
-    }
-
-    .slick-next{
-      right: 30px;
-      z-index: 99;
-    }
-
-    .slick-prev{
-      left: 30px;
-      z-index: 99;
-    }
-
-    #slider .slick-prev:before,
-    #slider .slick-next:before
-    {
-        color: #fff;
-    }
+  body{
+    background-image: url('{{ asset('img/assets/background.png') }}');
+    background-size: 1000px;
+  }
   </style>
 @endsection
 
@@ -32,7 +16,7 @@
 <div id="slider">
   @foreach ($covers as $cover)
     <div style="height:67vh;background-image: url('{{ asset('img/slider/'.$cover->name) }}'); background-size:cover">
-      <h1 class="center" style="color:white; font-size:50px; margin-top:25vh">{{ $cover->title }}</h1>
+      <h1 class="center" style="color:white; font-size:40px; margin-top:25vh">{{ $cover->title }}</h1>
       <h3 class="center" style="color:white; font-size:30px">{{ $cover->subtitle }}</h3>
     </div>
   @endforeach
@@ -47,7 +31,7 @@
           <i class="fa fa-phone fa-2x socialnav"></i>
         </div>
         <div class="col s10 center">
-          <p style="font-weight:100"><span style="font-weight:900">LLAMANOS</span><br> pregunta por nuestros cursos y productos.</p>
+          <p style="font-weight:100;font-size:13px"><span style="font-weight:900;font-size:13px">LLAMANOS</span><br> pregunta por nuestros cursos y productos.</p>
         </div>
       </div>
     </div>
@@ -57,7 +41,7 @@
           <i class="fa fa-facebook fa-2x socialnav"></i>
         </div>
         <div class="col s10 center">
-          <p style="font-weight:100"><span style="font-weight:900">FACEBOOK</span><br> registrate y pregunta por nuestros productos.</p>
+          <p style="font-weight:100;font-size:13px"><span style="font-weight:900;font-size:13px">FACEBOOK</span><br> registrate y pregunta por nuestros productos.</p>
         </div>
       </div>
     </div>
@@ -67,7 +51,7 @@
           <i class="fa fa-whatsapp fa-5x"></i>
         </div>
         <div class="col s10 center">
-          <p style="font-weight:100"><span style="font-weight:900">WHATSAPP</span><br> registrate y pregunta por nuestros productos.</p>
+          <p style="font-weight:100;font-size:13px"><span style="font-weight:900;font-size:13px">WHATSAPP</span><br> registrate y pregunta por nuestros productos.</p>
         </div>
       </div>
     </div>
@@ -83,20 +67,21 @@
 <!-- [Courses]-->
 
 <div class="section bg">
-  <div id="courses" class="container">
+  <div id="courses" style="margin:10px 50px">
       @foreach ($courses as $course)
-        <div class="card" style="margin-left:10px;margin-right:10px">
+        <div class="card z-depth-4" style="margin-left:10px;margin-right:10px">
           <div class="card-image">
-            <img src="{{ asset('img/courses/' . $course->image) }}" style="height:30vh">
+            <img src="{{ asset('img/courses/' . $course->image) }}" style="height:45vh">
           </div>
-          <div class="card-content">
-            <h5 class="center" style="color:#f3357f">{{ $course->name }}</h5>
-            <p>
+          <div class="card-content" style="padding:10px;background-color:#f7f8f9;height:200px;position:relative">
+            <h5 class="center" style="color:#f3357f;margin:0px 6px">{{ $course->name }}</h5>
+            <p class="center">
               {{ $course->description }}
             </p>
-          </div>
-          <div class="card-action">
-            <a href="#">This is a link</a>
+            <div class="bottom-fixed center">
+              <a href="#"><i class="fa fa-phone socialcourse"></i></a>
+              <a href="#"><i class="fa fa-whatsapp socialcourse"></i></a>
+            </div>
           </div>
         </div>
       @endforeach
@@ -113,7 +98,7 @@
 
 <!-- [Products]-->
 <div class="section bg">
-  <div id="products" class="container">
+  <div id="products" style="margin:10px 50px">
     <div class="">
       <div class="row">
         @php
@@ -123,10 +108,10 @@
         @foreach ($products as $product)
           @if ($i<4)
             <div class="col s10 offset-s1 m3">
-              <div class="card">
+              <div class="card z-depth-4">
                 <div class="card-image activator waves-effect waves-block waves-light">
                   <img src="{{ asset('img/products/' . $product->image) }}" style="height:30vh">
-                  <span class="card-title activator" style="color:white;background-color:rgba(248,51,124,.6);font-size:13px;width:100%">{{$product->name}}</span>
+                  <span class="card-title activator center" style="color:white;background-color:rgba(248,51,124,.6);font-size:15px;width:100%;padding:10px">{{$product->name}}</span>
                 </div>
                 <div class="card-reveal" style="background-color: rgba(248,51,124,.9); color:white">
                   <span class="card-title white-text" style="font-size:15px">{{$product->name}}<i class="material-icons right">close</i></span>
@@ -343,6 +328,9 @@
     <div class="col s12 m12 l6">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14934.03202158524!2d-100.44111977562712!3d20.648901508596094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDM4JzU2LjAiTiAxMDDCsDI1JzU2LjUiVw!5e0!3m2!1ses!2smx!4v1523416643375" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
       {{-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.951745061328!2d-101.37423878539242!3d20.67154210525353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842c7fb4b3a75dc5%3A0xd05f16c502b4458d!2sPlaza+Jacarandas!5e0!3m2!1ses!2smx!4v1523416722510" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> --}}
+      {{-- <div class="row" style="height:100px;background-color:rgba(243,53,127,.5)">
+        <h4>hola</h4>
+      </div> --}}
     </div>
   </div>
 </div>
@@ -352,67 +340,5 @@
 @endsection
 
 @section('addScripts')
-  <script type="text/javascript">
 
-    $('#slider').slick({
-      infinite: true,
-      accessibility:true,
-      autoplay: true,
-      autoplaySpeed: 3000,
-      prevArrow:"<button type='button' class='slick-prev' style='color:black'>Prev</button>",
-      nextArrow:"<button type='button' class='slick-next' style='color:blue'>Next</button>"
-    });
-
-    $('#courses').slick({
-      lazyLoad: 'progresive',
-      infinite: true,
-      accessibility:true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      prevArrow:"<button type='button' class='slick-prev' style='left:-50px'>Prev</button>",
-      nextArrow:"<button type='button' class='slick-next' style='right:-50px'>Next</button>",
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-      ]
-    });
-
-    $('#products').slick({
-      lazyLoad: 'progresive',
-      infinite: true,
-      accessibility:true,
-      prevArrow:"<button type='button' class='slick-prev' style='left:-50px'>Prev</button>",
-      nextArrow:"<button type='button' class='slick-next' style='right:-50px'>Next</button>"
-    });
-
-
-    $('.marcas').slick({
-      infinite: true,
-      accessibility:true
-    });
-  </script>
 @endsection
