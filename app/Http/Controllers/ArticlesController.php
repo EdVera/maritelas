@@ -46,7 +46,7 @@ class ArticlesController extends Controller
         $name = 'maritelas_'. $aux . time() . '.' . $request->cover->getClientOriginalExtension();
         $path = public_path() . '/img/articles/';
         $request->cover->move($path, $name);
-        $artcile->image = $name;
+        $article->image = $name;
       }
 
       $article->save();
@@ -66,7 +66,7 @@ class ArticlesController extends Controller
         }
       }
 
-      return redirect()->route('articles.create');
+      return redirect()->route('articles.index');
 
     }
 
@@ -112,6 +112,10 @@ class ArticlesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $article =Article::find($id);
+        $article->delete();
+
+        return redirect()->route('articles.index');
+
     }
 }

@@ -21,7 +21,7 @@
   		<thead>
   			<tr>
   				<th>Foto</th>
-          <th>Curso</th>
+          <th>Artículo</th>
   				<th>Descripción</th>
   				<th>Acción</th>
   			</tr>
@@ -30,12 +30,13 @@
   			@foreach($articles as $article)
   			<tr>
 					<td>
-						<img src="{{ asset('img/courses/'.$article->image) }}" alt="Telas" style="max-width:150px">
+						<img src="{{ asset('img/articles/'.$article->image) }}" alt="Telas" style="max-width:150px">
 					</td>
   				<td>{{ $article->title }}</td>
           <td>{{ $article->description }}</td>
   				<td>
-  					<a href="{{ route('courses.destroy', $article->id) }}" class="btn red lighten-1"><i class="material-icons">delete</i></a>
+						<a href="{{ route('articles.edit', $article->id) }}" class="btn yellow darken-1"><i class="material-icons">delete</i></a>
+  					<a href="{{ route('articles.destroy', $article->id) }}" class="btn red lighten-1"><i class="material-icons">delete</i></a>
   				</td>
   			</tr>
   			@endforeach
