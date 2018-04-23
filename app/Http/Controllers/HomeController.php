@@ -18,15 +18,17 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $courses = Course::all();
-        $products = Product::all();
-        $covers = Simage::all();
+      $courses = Course::all();
+      $products = Product::all();
+      $covers = Simage::all();
+      $articles = Article::all();
 
-        // dd($cover);
-        return view('site.welcome')
-          ->with('courses',$courses)
-          ->with('products',$products)
-          ->with('covers',$covers);
+      // dd($cover);
+      return view('site.welcome')
+        ->with('courses',$courses)
+        ->with('products',$products)
+        ->with('covers',$covers)
+        ->with('articles',$articles);
     }
 
     /**
@@ -34,9 +36,13 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function blog()
     {
-        //
+      $articles = Article::all();
+
+      // dd($cover);
+      return view('site.blog')
+        ->with('articles',$articles);
     }
 
     /**

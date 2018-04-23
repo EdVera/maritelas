@@ -2,10 +2,37 @@
 
 @section('addCSS')
   <style media="screen">
+  *{
+    font-family: Nunito;
+  }
+
+  h1,h2,h3,h4,h5,h6{
+    font-family: Nunito;
+  }
+
   body{
     background-image: url('{{ asset('img/assets/background.png') }}');
     background-size: 1000px;
   }
+
+  .bgpink{
+    background-color: #f8337c;
+  }
+
+  .botonbg{
+    background-image: url('{{ asset('img/assets/background.png') }}');
+  }
+
+  .transbg{
+    background-image: url('{{ asset('img/assets/trans.jpg') }}');
+    background-size: 1000px;
+  }
+
+  .card .card-content{
+    padding: 14px
+  }
+
+  .slick-slide:focus { outline: none; }
   </style>
 @endsection
 
@@ -158,6 +185,33 @@
 <!-- End [Blog banner] -->
 
 <!-- [Blog]-->
+
+<div class="section transbg">
+  <div class="" id="articles" style="margin:10px 50px">
+      @foreach ($articles as $article)
+        <div class="card z-depth-4" style="margin-left:10px;margin-right:10px">
+          <div class="card-content" style=";background-color:#be2865;height:150px;position:relative">
+            <h5 style="color:#fff;">{{ strtoupper($article->title) }}</h5>
+            <p class="grey-text text-lighten-2" style="font-weight:100; font-size:15px">
+              {{ $article->description }}
+            </p>
+            <div class="row nobottom" style="position:absolute;bottom:10px;left:0;width:100%;">
+              <div class="col s12 m6">
+                <a class="blue-grey-text text-lighten-3" href="#">SEGUIR LEYENDO >></a>
+              </div>
+              <div class="col s12 m6 right-align">
+                <p class="blue-grey-text text-lighten-3">{{ $article->created_at->format('d M') }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-image">
+            <img src="{{ asset('img/articles/' . $article->image) }}" style="height:25vh">
+          </div>
+        </div>
+      @endforeach
+  </div>
+</div>
+
 <!-- End [Blog] -->
 
 <!-- [Brands banner]-->

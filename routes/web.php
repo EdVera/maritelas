@@ -19,9 +19,9 @@ Route::group(['as' => 'site.'], function () {
 				'as' 	=>	'index'
 			]);
 
-		Route::get('/Home', [
-				'uses'	=> 	'HomeController@index',
-				'as' 	=>	'index'
+		Route::get('/blog', [
+				'uses'	=> 	'HomeController@blog',
+				'as' 	=>	'blog'
 			]);
 
 		/*Route::get('/Mail', function () {

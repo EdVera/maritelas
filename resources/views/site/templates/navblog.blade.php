@@ -65,7 +65,7 @@
       <ul class="right" style="margin-right:50px">
         <li class="lh84" id="menuinicio">
           <a class="menu-link" href="#cover">
-            INICIO
+            HOLA
           </a>
         </li>
         <li class="lh84" id="menuproductos">

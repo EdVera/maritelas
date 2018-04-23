@@ -5,7 +5,8 @@
 	  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
 	  <title>Maritelas</title>
 	  <!-- CSS  -->
-		<link rel="shortcut icon" href="{{ asset('img/logo/favico.jpg') }}">
+		<link rel="shortcut icon" href="{{ asset('img/logo/favico.png') }}">
+		<link href="https://fonts.googleapis.com/css?family=Mallanna|Mandali|Nunito:200,300,400,600,700,800,900" rel="stylesheet">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	  <link href="{{ asset('css/w3.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
 	  <link href="{{ asset('plugins/materialize/css/materialize.min.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -19,7 +20,11 @@
 	</head>
 	<body>
 
-		@include('site.templates.nav')
+		@if (Route::currentRouteName() == 'site.blog')
+			@include('site.templates.navblog')
+		@else
+			@include('site.templates.nav')
+		@endif
 
 		@yield('body-content')
 
@@ -28,8 +33,9 @@
 		<!--  Start [CSS]-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" async>
 		<!--  End [CSS]-->
+
 		<!--  Scripts-->
-		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="{{ asset('plugins/jquery/jquery2.min.js') }}"></script>
 		<script src="{{ asset('plugins/materialize/js/materialize.min.js') }}"></script>
 		<script src="{{ asset('js/init.js') }}"></script>
 		<script src="{{ asset('plugins/slick/slick.js') }}"></script>
