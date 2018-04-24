@@ -10,9 +10,10 @@ img.menulogomovil{
 }
 
 img.menulogo{
-  height:60px;
-  margin-top:8px;
-  margin-left:50px;
+  /* height:150px; */
+  width: 300px;
+  margin-top:0px;
+  margin-left:20px;
 }
 img.menupe{
   height:40px;
@@ -56,7 +57,7 @@ nav#topnavmovil i{
 
 nav#undernav{
   background-color: #fff;
-  height: 76px;
+  height: 78px;
 }
 
 nav#undernav a{
@@ -65,12 +66,12 @@ nav#undernav a{
 
 nav#undernav-movil{
   background-color: #fff;
-  height: 76px;
+  height: 78px;
 }
 
 .lh84{
-  line-height: 76px !important;
-  height: 76px;
+  line-height: 78px !important;
+  height: 78px;
   letter-spacing: 1px;
 }
 .lh60{

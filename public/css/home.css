@@ -133,6 +133,19 @@ left:0px;
    color: white;
 }
 
+.socialproduct {
+   padding: 5px;
+   font-size: 15px;
+   width: 38px;
+   height: 38px;
+   text-align: center;
+   text-decoration: none;
+   margin: 5px 5px;
+   border-radius: 50%;
+   color: #f3357f;
+   background-color: white;
+}
+
 .input-field input[type=text], .input-field input[type=email]{
   background-color: white;
   margin: 0 0 -10px 0;

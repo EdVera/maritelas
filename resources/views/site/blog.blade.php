@@ -11,8 +11,8 @@
   }
 
   body{
-    background-image: url('{{ asset('img/assets/trans.jpg') }}');
-    background-size:;
+    background-image: url('{{ asset('img/assets/trans.png') }}');
+    /* background-size: 1000px; */
   }
 
   .card .card-content{

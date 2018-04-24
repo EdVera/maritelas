@@ -53,7 +53,7 @@
 <!-- Nav menu -->
 
 <!-- For desktop -->
-<div class="navbar-fixed hide-on-med-and-down" style="height:84px">
+<div class="navbar-fixed hide-on-med-and-down" style="height:78px">
   <nav role="navigation" id="undernav">
     <div class="nav-wrapper">
       <a class="center" href="Home" id="menulogo">
@@ -65,7 +65,7 @@
       <ul class="right" style="margin-right:50px">
         <li class="lh84" id="menuinicio">
           <a class="menu-link" href="#cover">
-            HOLA
+            INICIO
           </a>
         </li>
         <li class="lh84" id="menuproductos">
