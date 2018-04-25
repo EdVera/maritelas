@@ -64,7 +64,7 @@
       </a>
       <ul class="right" style="margin-right:50px">
         <li class="lh84" id="menuinicio">
-          <a class="menu-link" href="#cover">
+          <a class="" onclick="toTop()">
             INICIO
           </a>
         </li>

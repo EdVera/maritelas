@@ -39,31 +39,52 @@
 
 <!-- [Blog]-->
   <div class="" style="margin:10px 50px">
+    <div class="row" style="padding:0 .75rem;">
       @foreach ($articles as $article)
         @if ($loop->first)
-          <div class="row flex" style=";background-color:#be2865;height:150px;">
-            <div class="col s12 m6">
-              <h5 style="color:#fff;">{{ strtoupper($article->title) }}</h5>
-              <p class="grey-text text-lighten-2" style="font-weight:100; font-size:15px">
+            <div class="col s12 m6" style="height:312px;position:relative;background-color:white">
+              <h2 style="color:#f3357f;font-weight:900">{{ strtoupper($article->title) }}</h2>
+              <p style="font-weight:100; font-size:25px;color: #ff1c74">
                 {{ $article->description }}
               </p>
-              <div class="row nobottom" style="position:absolute;bottom:10px;left:0;width:100%;">
+              <div class="row nobottom" style="bottom:10px;left:0;width:100%;position:absolute">
                 <div class="col s12 m6">
-                  <a class="blue-grey-text text-lighten-3" href="#">SEGUIR LEYENDO >></a>
+                  <a style="color:#f335af ;" href="#">SEGUIR LEYENDO >></a>
                 </div>
                 <div class="col s12 m6 right-align">
-                  <p class="blue-grey-text text-lighten-3">{{ $article->created_at->format('d M') }}</p>
+                  <p style="color:#f335af ;">{{ $article->created_at->format('d M') }}</p>
                 </div>
               </div>
             </div>
-
-            <div class="col s12 m6">
-              <img src="{{ asset('img/articles/' . $article->image) }}" style="width:100%">
+            <div class="col s12 m6" style="padding:0;background-image:url('{{ asset('img/articles/' . $article->image) }}'); height:312px">
             </div>
           </div>
+          <div class="row">
         @else
+          <div class="col s12 m4" >
+            <div class="card z-depth-4" style="margin-left:0;margin-right:0">
+              <div class="card-content" style=";background-color:#fafafa;height:180px;position:relative">
+                <h5 style="color:#f3357f;font-weight:900">{{ strtoupper($article->title) }}</h5>
+                <p style="font-weight:100; font-size:15px;color:#ff1c74">
+                  {{ $article->description }}
+                </p>
+                <div class="row nobottom" style="position:absolute;bottom:10px;left:0;width:100%;">
+                  <div class="col s12 m6">
+                    <a href="#" style="color:#f335af">SEGUIR LEYENDO >></a>
+                  </div>
+                  <div class="col s12 m6 right-align">
+                    <p style="color:#f335af">{{ $article->created_at->format('d M') }}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-image">
+                <img src="{{ asset('img/articles/' . $article->image) }}" style="height:25vh">
+              </div>
+            </div>
+          </div>
         @endif
       @endforeach
+    </div>
   </div>
 
 <!-- End [Blog] -->

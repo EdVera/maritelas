@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $('.modal').modal();
   $('.parallax').parallax();
-  $(".button-collapse").sideNav(); 
+  $(".button-collapse").sideNav();
 });
 
 
@@ -47,3 +47,11 @@ $(document).on('click', 'a.menu-link', function(event){
 	        scrollTop: $( $.attr(this, 'href') ).offset().top
 	    }, 500);
 	});
+
+function toTop(){
+  event.preventDefault();
+  $('html, body').animate({
+      scrollTop: 0
+  }, 500);
+
+}
