@@ -35,6 +35,7 @@
   				<td>{{ $product->name }}</td>
           <td>{{ $product->description }}</td>
   				<td>
+						<a href="{{ route('products.edit', $product->id) }}" class="btn yellow lighten-1"><i class="material-icons">edit</i></a>
   					<a href="{{ route('products.destroy', $product->id) }}" class="btn red lighten-1"><i class="material-icons">delete</i></a>
   				</td>
   			</tr>

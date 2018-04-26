@@ -73,7 +73,8 @@ class SimagesController extends Controller
      */
     public function edit($id)
     {
-        //
+      $cover = Simage::find($id);
+      return view('admin.simages.edit')->with("cover",$cover);
     }
 
     /**
@@ -85,7 +86,19 @@ class SimagesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $cover = Simage::find($id);
+        $cover->title = $request->title;
+        $cover->subtitle = $request->subtitle;
+        if ($request->hasFile('image')) {
+          $file = $request->file('image');
+          $name = 'maritelas' . time() . '.' . $file->getClientOriginalExtension();
+          $path = public_path() . '/img/slider/';
+          $file->move($path, $name);
+
+          $cover->name = $name;
+        }
+        $cover->save();
+        return redirect()->route('simages.index');
     }
 
     /**

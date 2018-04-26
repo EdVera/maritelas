@@ -35,7 +35,7 @@
   .slick-slide:focus { outline: none; }
 
   #wrapper { position: relative; padding: 0}
-  #over_map { position: absolute; bottom: 0px; z-index: 99; }
+  #over_map { position: absolute; bottom: 60px; z-index: 99; }
 
   @media only screen and (max-width: 600px) { .row.valign-wrapper { display: inherit; } }
   </style>
@@ -391,21 +391,25 @@
     </div>
     <div class="col s12 m12 l6" id="wrapper">
       <div id="google_map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14934.03202158524!2d-100.44111977562712!3d20.648901508596094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDM4JzU2LjAiTiAxMDDCsDI1JzU2LjUiVw!5e0!3m2!1ses!2smx!4v1523416643375" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
-        {{-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.951745061328!2d-101.37423878539242!3d20.67154210525353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842c7fb4b3a75dc5%3A0xd05f16c502b4458d!2sPlaza+Jacarandas!5e0!3m2!1ses!2smx!4v1523416722510" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> --}}
+        <iframe id="qro" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14934.03202158524!2d-100.44111977562712!3d20.648901508596094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDM4JzU2LjAiTiAxMDDCsDI1JzU2LjUiVw!5e0!3m2!1ses!2smx!4v1523416643375" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe id="irapuato" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.951745061328!2d-101.37423878539242!3d20.67154210525353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842c7fb4b3a75dc5%3A0xd05f16c502b4458d!2sPlaza+Jacarandas!5e0!3m2!1ses!2smx!4v1523416722510" width="100%" height="500" frameborder="0" style="border:0;display:none" allowfullscreen></iframe>
       </div>
       <div class="row nobottom" id="over_map" style="padding: 0 0.75em">
         <div class="col s6" style="padding:0 .75em">
-          <div style="background-color:rgba(243,53,127,.9); padding-top:3px;padding-bottom:3px">
-            <h5 class="white-text center">QUERÉTARO</h5>
-            <h6 class="white-text center">Plaza urban center jurica, planta alta frente a cinemex</h6>
-          </div>
+          <button class="btn-flat" onclick="mapQro()" style="padding:0">
+            <div style="background-color:rgba(243,53,127,.9); padding-top:3px;padding-bottom:3px">
+              <h5 class="white-text center">QUERÉTARO</h5>
+              <h6 class="white-text center">Plaza urban center jurica, planta alta frente a cinemex</h6>
+            </div>
+          </button>
         </div>
         <div class="col s6" style="padding:0 .75em">
-          <div style="background-color:rgba(243,53,127,.9); padding-top:3px;padding-bottom:3px">
-            <h5 class="white-text center">IRAPUATO</h5>
-            <h6 class="white-text center">Plaza Jacarandas, Soriana, Av. Arboledas #1200 loc. 20B.</h6>
-          </div>
+          <button class="btn-flat" onclick="mapIrapuato()" style="padding:0">
+            <div style="background-color:rgba(243,53,127,.9); padding-top:3px;padding-bottom:3px">
+              <h5 class="white-text center">IRAPUATO</h5>
+              <h6 class="white-text center">Plaza Jacarandas, Soriana, Av. Arboledas #1200 loc. 20B.</h6>
+            </div>
+          </button>
         </div>
       </div>
     </div>
@@ -417,5 +421,24 @@
 @endsection
 
 @section('addScripts')
+  <script type="text/javascript">
+    function mapQro() {
+      var x = document.getElementById("qro");
+      var y = document.getElementById("irapuato");
+      if (x.style.display === "none") {
+          x.style.display = "block";
+          y.style.display = "none";
+      }
+    }
+
+    function mapIrapuato() {
+      var x = document.getElementById("qro");
+      var y = document.getElementById("irapuato");
+      if (y.style.display === "none") {
+          y.style.display = "block";
+          x.style.display = "none";
+      }
+    }
+  </script>
 
 @endsection

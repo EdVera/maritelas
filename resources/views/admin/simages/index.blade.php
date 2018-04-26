@@ -35,6 +35,7 @@
   				<td>{{ $image->title }}</td>
           <td>{{ $image->subtitle }}</td>
   				<td>
+						<a href="{{ route('simages.edit', $image->id) }}" class="btn yellow lighten-1"><i class="material-icons">edit</i></a>
   					<a href="{{ route('simages.destroy', $image->id) }}" class="btn red lighten-1"><i class="material-icons">delete</i></a>
   				</td>
   			</tr>

@@ -88,6 +88,17 @@ class CoursesController extends Controller
     {
       $course = Course::find($id);
       $course->fill($request->all());
+      $wp = "Me%20gustaría%20saber%20más%20acerca%20de%20su%20curso%20".$request->name;
+      $course->whatsapp = "https://api.whatsapp.com/send?phone=524423773581&text=".$wp;
+
+      if ($request->hasFile('image')) {
+        $file = $request->file('image');
+        $imgname = 'maritelas' . time() . '.' . $file->getClientOriginalExtension();
+        $path = public_path() . '/img/courses/';
+        $file->move($path, $imgname);
+        $course->image = $imgname;
+      }
+      
       $course->save();
 
       return redirect()->route('courses.index');

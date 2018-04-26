@@ -89,7 +89,8 @@ class ArticlesController extends Controller
      */
     public function edit($id)
     {
-        //
+      $article = Article::find($id);
+      return view('admin.articles.edit')->with("article",$article);
     }
 
     /**
@@ -101,7 +102,39 @@ class ArticlesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $aux = 0;
+
+      $article = Article::find($id);
+      $article->title = $request->title;
+      $article->description = $request->description;
+      $article->text = $request->text;
+      $article->video = $request->video;
+
+      if ($request->hasFile('cover')) {
+        $name = 'maritelas_'. $aux . time() . '.' . $request->cover->getClientOriginalExtension();
+        $path = public_path() . '/img/articles/';
+        $request->cover->move($path, $name);
+        $article->image = $name;
+      }
+
+      $article->save();
+
+      if ($request->hasFile('images')) {
+        foreach ($request->images as $file) {
+          //$file = $request->file('image');
+          $aux++;
+          $name = 'maritelas_'. $aux . time() . '.' . $file->getClientOriginalExtension();
+          $path = public_path() . '/img/articles/';
+          $file->move($path, $name);
+
+          $img = new ArticleImage();
+          $img->name = $name;
+          $img->article_id=$article->id;
+          $img->save();
+        }
+      }
+
+      return redirect()->route('articles.index');
     }
 
     /**

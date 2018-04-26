@@ -73,7 +73,8 @@ class ProductsController extends Controller
      */
     public function edit($id)
     {
-        //
+      $product = Product::find($id);
+      return view('admin.products.edit')->with('product',$product);
     }
 
     /**
@@ -85,7 +86,20 @@ class ProductsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $product = Product::find($id);
+      $wp = "Me%20gustaría%20saber%20más%20acerca%20de%20sus%20".$request->name;
+      $product->name = $request->name;
+      $product->description = $request->description;
+      $product->whatsapp = "https://api.whatsapp.com/send?phone=524423773581&text=".$wp;
+      if ($request->hasFile('image')) {
+        $file = $request->file('image');
+        $imgname = 'maritelas' . time() . '.' . $file->getClientOriginalExtension();
+        $path = public_path() . '/img/products/';
+        $file->move($path, $imgname);
+        $product->image = $imgname;
+      }
+      $product->save();
+      return redirect()->route('products.index');
     }
 
     /**
