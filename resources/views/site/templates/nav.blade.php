@@ -24,9 +24,9 @@
     </div>
   </nav>
 </div>
-  <!-- End little nav bar for desktop -->
+<!-- End little nav bar for desktop -->
 
-  <!-- Little nav bar for mobil -->
+<!-- Little nav bar for mobil -->
   <div class="navbar-fixed hide-on-large-only" style="height: 40px">
     <nav style="z-index: 4;height:40px" role="navigation" class="z-depth-0" id="topnavmovil">
       <div class="nav-wrapper" height="40px">
@@ -56,10 +56,10 @@
 <div class="navbar-fixed hide-on-med-and-down" style="height:78px">
   <nav role="navigation" id="undernav">
     <div class="nav-wrapper">
-      <a class="center" href="Home" id="menulogo">
+      <a class="center" href="{{ route('site.index') }}" id="menulogo">
         <img class="menulogo" src="{{ asset('img/logo/logo.png') }}">
       </a>
-      <a class="brand-logo hide" href="Home" id="menupe">
+      <a class="brand-logo hide" href="{{ route('site.index') }}" id="menupe">
         <img class="menupe" src="{{ asset('img/logo/simple.png') }}" class="hide">
       </a>
       <ul class="right" style="margin-right:50px">
@@ -74,7 +74,7 @@
           </a>
         </li>
         <li class="lh84" id="menublog">
-          <a class="menu-link" href="#noticias">
+          <a href="{{ route('site.blog.index') }}">
             BLOG
           </a>
         </li>

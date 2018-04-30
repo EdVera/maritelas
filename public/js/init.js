@@ -2,11 +2,12 @@ $(document).ready(function(){
   $('.modal').modal();
   $('.parallax').parallax();
   $(".button-collapse").sideNav();
+  $('.materialboxed').materialbox();
 });
 
 
 $(window).scroll(function() {
- if ($(document).scrollTop() > 35) {
+ if ($(document).scrollTop() > 20) {
    //cuando se hace el scroll down
    $('#prueba').addClass('hide');
    $('#menulogo').addClass('hide');

@@ -56,35 +56,35 @@
 <div class="navbar-fixed hide-on-med-and-down" style="height:78px">
   <nav role="navigation" id="undernav">
     <div class="nav-wrapper">
-      <a class="center" href="Home" id="menulogo">
+      <a class="center" href="{{ route('site.index') }}" id="menulogo">
         <img class="menulogo" src="{{ asset('img/logo/logo.png') }}">
       </a>
-      <a class="brand-logo hide" href="Home" id="menupe">
+      <a class="brand-logo hide" href="{{ route('site.index') }}" id="menupe">
         <img class="menupe" src="{{ asset('img/logo/simple.png') }}" class="hide">
       </a>
       <ul class="right" style="margin-right:50px">
         <li class="lh84" id="menuinicio">
-          <a class="menu-link" href="#cover">
+          <a href="/#cover">
             INICIO
           </a>
         </li>
         <li class="lh84" id="menuproductos">
-          <a class="menu-link" href="#productos">
+          <a href="/#productos">
             PRODUCTOS
           </a>
         </li>
         <li class="lh84" id="menublog">
-          <a class="menu-link" href="#noticias">
+          <a onclick="toTop()">
             BLOG
           </a>
         </li>
         <li class="lh84" id="menucursos">
-          <a class="menu-link" href="#cursos">
+          <a href="/#cursos">
             CURSOS
           </a>
         </li>
         <li class="lh84" id="menucontacto">
-          <a class="menu-link" href="#contacto">
+          <a href="/#contacto">
             CONTACTO
           </a>
         </li>

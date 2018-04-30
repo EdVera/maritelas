@@ -15,6 +15,9 @@ class CreateArticleImagesTable extends Migration
     {
         Schema::create('article_images', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name',30);
+            $table->integer('article_id')->unsigned();
+            $table->foreign('article_id')->references('id')->on('articles')->onDelete('cascade');
             $table->timestamps();
         });
     }

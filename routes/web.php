@@ -14,15 +14,24 @@
 
 Route::group(['as' => 'site.'], function () {
 
-		Route::get('/', [
-				'uses'	=> 	'HomeController@index',
-				'as' 	=>	'index'
-			]);
+	Route::get('/', [
+			'uses'	=> 	'HomeController@index',
+			'as' 	=>	'index'
+		]);
 
-		Route::get('/blog', [
-				'uses'	=> 	'HomeController@blog',
-				'as' 	=>	'blog'
-			]);
+	Route::group(['prefix' => 'blog', 'as' => 'blog.'], function () {
+
+			Route::get('/', [
+					'uses'	=> 	'HomeController@blog',
+					'as' 		=>	'index'
+				]);
+
+			Route::get('/{slug}', [
+					'uses' 	=> 	'HomeController@article',
+					'as'	  => 	'article'
+				]);
+
+	});
 
 		/*Route::get('/Mail', function () {
 		    return view('site.emails.presale');

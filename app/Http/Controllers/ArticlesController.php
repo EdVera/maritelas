@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str as Str;
 
 use App\Article;
 use App\ArticleImage;
@@ -41,6 +42,7 @@ class ArticlesController extends Controller
       $aux = 0;
 
       $article = new Article($request->all());
+      $slug = Str::slug($article->title);
 
       if ($request->hasFile('cover')) {
         $name = 'maritelas_'. $aux . time() . '.' . $request->cover->getClientOriginalExtension();

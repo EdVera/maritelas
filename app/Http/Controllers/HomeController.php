@@ -46,25 +46,16 @@ class HomeController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function article($slug)
     {
-        //
+      $article = Article::where('slug','=', $slug)->firstOrFail();
+      $article->images;
+      return view('site.article')->with('article',$article);
     }
 
     /**

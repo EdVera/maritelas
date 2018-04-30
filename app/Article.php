@@ -15,4 +15,8 @@ class Article extends Model
       'text',
       'video'
     ];
+
+    public function images(){
+      return $this->hasMany('App\ArticleImage');
+    }
 }
