@@ -1,3 +1,12 @@
+*{
+  font-family: Nunito;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: Nunito;
+}
+
+
 .bottom-fixed{
 position: absolute;
 width: 100%;
@@ -166,4 +175,51 @@ left:0px;
 
 #contactsection i{
   color: #5d5d5d;
+}
+
+.bgpink{
+  background-color: #f8337c;
+}
+
+
+.card .card-content{
+  padding: 14px
+}
+
+.slick-slide:focus { outline: none; }
+
+#wrapper {
+  position: relative; padding: 0
+}
+
+#over_map {
+  position: absolute; top: 0px; z-index: 99;width: 100%
+}
+
+#slider h1{
+  color:white; font-size:40px; margin-top:25vh;
+}
+
+#slider h3{
+  color:white; font-size:30px
+}
+
+@media only screen and (max-width: 600px) {
+  .row.valign-wrapper {
+    display: inherit;
+  }
+
+  .banner h1{
+    font-size: 20px;
+    margin: 1.1rem 0;
+  }
+
+  #slider h1{
+    color:white; font-size:30px; margin-top:25vh;
+  }
+
+  #slider h3{
+    color:white; font-size:20px
+  }
+
 }

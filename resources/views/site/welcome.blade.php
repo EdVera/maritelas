@@ -1,22 +1,15 @@
+@php
+  $whats = "https://api.whatsapp.com/send?phone=584144554494&text=Me%20gustaría%20saber%20más%20acerca%20de%20sus%20productos";
+@endphp
+
 @extends('site.templates.layout')
 
 @section('addCSS')
   <style media="screen">
-  *{
-    font-family: Nunito;
-  }
-
-  h1,h2,h3,h4,h5,h6{
-    font-family: Nunito;
-  }
 
   body{
     background-image: url('{{ asset('img/assets/background.png') }}');
     background-size: 1000px;
-  }
-
-  .bgpink{
-    background-color: #f8337c;
   }
 
   .botonbg{
@@ -25,19 +18,8 @@
 
   .transbg{
     background-image: url('{{ asset('img/assets/trans.png') }}');
-    /* background-size: 1000px; */
   }
 
-  .card .card-content{
-    padding: 14px
-  }
-
-  .slick-slide:focus { outline: none; }
-
-  #wrapper { position: relative; padding: 0}
-  #over_map { position: absolute; top: 20px; z-index: 99; }
-
-  @media only screen and (max-width: 600px) { .row.valign-wrapper { display: inherit; } }
   </style>
 @endsection
 
@@ -48,45 +30,51 @@
 <div id="slider">
   @foreach ($covers as $cover)
     <div style="height:67vh;background-image: url('{{ asset('img/slider/'.$cover->name) }}'); background-size:cover">
-      <h1 class="center" style="color:white; font-size:40px; margin-top:25vh">{{ $cover->title }}</h1>
-      <h3 class="center" style="color:white; font-size:30px">{{ $cover->subtitle }}</h3>
+      <h1 class="center" style="">{{ $cover->title }}</h1>
+      <h3 class="center" style="">{{ $cover->subtitle }}</h3>
     </div>
   @endforeach
 </div>
 <!-- End [Cover] -->
 
 <!-- [Social]-->
-  <div class="row nobottom" style="background-color:white">
-    <div class="col s4" style="color:#f3357f;background-color:white">
-      <div class="row nobottom valign-wrapper">
-        <div class="col s2" style="padding-right:0px">
-          <i class="fa fa-facebook fa-2x socialnav" style="padding-top: 7px"></i>
-        </div>
-        <div class="col s10 center" style="padding-left:0px">
-          <p style="font-weight:100;font-size:13px"><span style="font-weight:900;font-size:13px">FACEBOOK</span><br> registrate y pregunta por nuestros productos.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col s4" style="color:#f3357f;background-color:white">
-      <div class="row nobottom valign-wrapper">
-        <div class="col s2" style="padding-right:0px">
-          <i class="fa fa-instagram fa-2x socialnav" style="padding-top:5px"></i>
-        </div>
-        <div class="col s10 center" style="padding-left:0px">
-          <p style="font-weight:100;font-size:13px"><span style="font-weight:900;font-size:13px">INSTAGRAM</span><br> síguenos en nuestras redes sociales.</p>
+  <div class="row nobottom" style="background-color:#80c357">
+    <a href="https://www.facebook.com/maritelascountry/">
+      <div class="col s4" style="color:#f3357f;background-color:white">
+        <div class="row nobottom valign-wrapper">
+          <div class="col s10 offset-s1 m2" style="padding-right:0px">
+            <i class="fa fa-facebook fa-2x socialnav" style="padding-top: 7px"></i>
+          </div>
+          <div class="col m10 hide-on-small-only center" style="padding-left:0px">
+            <p style="font-weight:100;font-size:13px"><span style="font-weight:900;font-size:13px">FACEBOOK</span><br> registrate y pregunta por nuestros productos.</p>
+          </div>
         </div>
       </div>
-    </div>
+    </a>
+    <a href="https://www.instagram.com/maritelascountrymexico/">
+      <div class="col s4" style="color:#f3357f;background-color:white">
+        <div class="row nobottom valign-wrapper">
+          <div class="col s10 offset-s1 m2" style="padding-right:0px">
+            <i class="fa fa-instagram fa-2x socialnav" style="padding-top:5px"></i>
+          </div>
+          <div class="col m10 hide-on-small-only center" style="padding-left:0px">
+            <p style="font-weight:100;font-size:13px"><span style="font-weight:900;font-size:13px">INSTAGRAM</span><br> síguenos en nuestras redes sociales.</p>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a href="{{ $whats }}" target="_blank">
     <div class="col s4" style="color:white;background-color:#80c357;padding-left:0">
       <div class="row nobottom valign-wrapper">
-        <div class="col s2 right-align" style="padding-right:0px">
+        <div class="col s10 offset-s1 m2 center" style="padding-right:0px">
           <i class="fa fa-whatsapp fa-3x center"></i>
         </div>
-        <div class="col s10 center" style="padding-left:0px">
+        <div class="col m10 hide-on-small-only center" style="padding-left:0px">
           <p style="font-weight:100;font-size:13px"><span style="font-weight:900;font-size:13px">WHATSAPP</span><br> registrate y pregunta por nuestros productos.</p>
         </div>
       </div>
     </div>
+    </a>
   </div>
 <!-- End [Social] -->
 
@@ -111,8 +99,8 @@
               {{ $course->description }}
             </p>
             <div class="bottom-fixed center">
-              <a href="#"><i class="fa fa-phone fa-2x socialcourse" style="font-size:1.75em;padding-top:7px"></i></a>
-              <a href="#"><i class="fa fa-whatsapp fa-2x socialcourse" style="padding-top:3px"></i></a>
+              <a href="tel:4626071044"><i class="fa fa-phone fa-2x socialcourse" style="font-size:1.75em;padding-top:7px"></i></a>
+              <a href="{{ $course->whatsapp }}"><i class="fa fa-whatsapp fa-2x socialcourse" style="padding-top:3px"></i></a>
             </div>
           </div>
         </div>
@@ -149,8 +137,8 @@
                   <span class="card-title white-text" style="font-size:15px">{{$product->name}}<i class="material-icons right">close</i></span>
                   <p class="center" style="font-size:13px">{{ $product->description }}.</p>
                   <div class="bottom-fixed center">
-                    <a href="#"><i class="fa fa-phone fa-2x socialproduct" style="font-size:1.75em;padding-top:7px"></i></a>
-                    <a href="#"><i class="fa fa-whatsapp fa-2x socialproduct" style="padding-top:3px"></i></a>
+                    <a href="tel:4626071044"><i class="fa fa-phone fa-2x socialproduct" style="font-size:1.75em;padding-top:7px"></i></a>
+                    <a href="{{ $product->whatsapp }}"><i class="fa fa-whatsapp fa-2x socialproduct" style="padding-top:3px"></i></a>
                   </div>
                 </div>
               </div>

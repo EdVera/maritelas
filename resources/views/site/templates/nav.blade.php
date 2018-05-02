@@ -4,9 +4,9 @@
     <div class="nav-wrapper" height="40px">
       <ul>
         <li>
-          <a href="tel:4624201075" class="white-text">
+          <a href="tel:4626071044" class="white-text">
             <i style="font-size: 13px;" class="material-icons left">phone</i>
-            <span style="font-size: 13px;">+52 (1) 4624201075</span>
+            <span style="font-size: 13px;">+52 (1) 4626071044</span>
           </a>
         </li>
         <li>
@@ -32,7 +32,7 @@
       <div class="nav-wrapper" height="40px">
         <ul>
           <li>
-            <a href="tel:4624201075" class="white-text">
+            <a href="tel:4626071044" class="white-text">
               <i style="font-size: 13px;" class="material-icons center">phone</i>
             </a>
           </li>

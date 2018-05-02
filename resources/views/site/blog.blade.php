@@ -2,13 +2,6 @@
 
 @section('addCSS')
   <style media="screen">
-  *{
-    font-family: Nunito;
-  }
-
-  h1,h2,h3,h4,h5,h6{
-    font-family: Nunito;
-  }
 
   body{
     background-image: url('{{ asset('img/assets/trans.png') }}');
@@ -32,8 +25,8 @@
 <!-- START PAGE -->
 
 <!-- [Contact banner]-->
-<div class="section">
-  <h1 class="center-align white-text">Noticias</h1>
+<div class="">
+  <H3 class="center-align white-text" style="margin:25px 0">NOTICIAS</H3>
 </div>
 <!-- End [Contact banner] -->
 
@@ -43,7 +36,7 @@
       @foreach ($articles as $article)
         @if ($loop->first)
             <div class="col s12 m6" style="height:312px;position:relative;background-color:white">
-              <h3 style="color:#f3357f;font-weight:900">{{ strtoupper($article->title) }}</h3>
+              <h4 style="color:#f3357f;font-weight:900">{{ strtoupper($article->title) }}</h4>
               <p style="font-weight:100; font-size:25px;color: #ff1c74">
                 {{ $article->description }}
               </p>
@@ -96,7 +89,7 @@
 <!-- End [Contact banner] -->
 
 <!-- [Contact]-->
-@include('site.template.contact')
+@include('site.templates.contact')
 <!-- End [Contact] -->
 
 <!-- END PAGE -->
