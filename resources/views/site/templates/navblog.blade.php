@@ -68,6 +68,11 @@
             INICIO
           </a>
         </li>
+        <li class="lh84" id="menucursos">
+          <a href="/#cursos">
+            CURSOS
+          </a>
+        </li>
         <li class="lh84" id="menuproductos">
           <a href="/#productos">
             PRODUCTOS
@@ -76,11 +81,6 @@
         <li class="lh84" id="menublog">
           <a onclick="toTop()">
             BLOG
-          </a>
-        </li>
-        <li class="lh84" id="menucursos">
-          <a href="/#cursos">
-            CURSOS
           </a>
         </li>
         <li class="lh84" id="menucontacto">

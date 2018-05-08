@@ -188,7 +188,7 @@
       @foreach ($articles as $article)
         <div class="card z-depth-4" style="margin-left:10px;margin-right:10px">
           <div class="card-content" style=";background-color:#fafafa;height:180px;position:relative">
-            <h5 style="color:#f3357f;font-weight:900">{{ strtoupper($article->title) }}</h5>
+            <h6 style="color:#f3357f;font-weight:700;margin-top:0px;font-size:20px">{{ strtoupper($article->title) }}</h6>
             <p style="font-weight:100; font-size:15px;color:#ff1c74">
               {{ $article->description }}
             </p>

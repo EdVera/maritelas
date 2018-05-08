@@ -1,3 +1,7 @@
+@php
+  $whats = "https://api.whatsapp.com/send?phone=584144554494&text=Me%20gustaría%20saber%20más%20acerca%20de%20sus%20productos";
+@endphp
+
 @extends('site.templates.layout')
 
 @section('addCSS')
@@ -18,6 +22,7 @@
 }
 
   .slick-slide:focus { outline: none; }
+
   </style>
 @endsection
 
@@ -36,8 +41,8 @@
       @foreach ($articles as $article)
         @if ($loop->first)
             <div class="col s12 m6" style="height:312px;position:relative;background-color:white">
-              <h4 style="color:#f3357f;font-weight:900">{{ strtoupper($article->title) }}</h4>
-              <p style="font-weight:100; font-size:25px;color: #ff1c74">
+              <h5 style="color:#f3357f;font-weight:700">{{ strtoupper($article->title) }}</h5>
+              <p style="font-weight:100; font-size:20px;color: #ff1c74">
                 {{ $article->description }}
               </p>
               <div class="row nobottom" style="bottom:10px;left:0;width:100%;position:absolute">
@@ -57,7 +62,7 @@
           <div class="col s12 m4" >
             <div class="card z-depth-4" style="margin-left:0;margin-right:0">
               <div class="card-content" style=";background-color:#fafafa;height:180px;position:relative">
-                <h5 style="color:#f3357f;font-weight:900">{{ strtoupper($article->title) }}</h5>
+                <h5 style="color:#f3357f;font-weight:700;font-size:20px;margin-top:0px">{{ strtoupper($article->title) }}</h5>
                 <p style="font-weight:100; font-size:15px;color:#ff1c74">
                   {{ $article->description }}
                 </p>

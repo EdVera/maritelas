@@ -1,3 +1,7 @@
+@php
+  $whats = "https://api.whatsapp.com/send?phone=584144554494&text=Me%20gustaría%20saber%20más%20acerca%20de%20sus%20productos";
+@endphp
+
 @extends('site.templates.layout')
 
 @section('addCSS')
@@ -26,6 +30,10 @@
 
     .bgpink{
       background-image: url('{{ asset('img/assets/trans.png') }}');
+    }
+
+    #contacto h5{
+      color: white;
     }
   </style>
 @endsection
