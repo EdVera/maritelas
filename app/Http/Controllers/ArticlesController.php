@@ -43,6 +43,7 @@ class ArticlesController extends Controller
 
       $article = new Article($request->all());
       $slug = Str::slug($article->title);
+      $article->slug = $slug;
 
       if ($request->hasFile('cover')) {
         $name = 'maritelas_'. $aux . time() . '.' . $request->cover->getClientOriginalExtension();
