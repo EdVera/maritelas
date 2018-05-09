@@ -19,7 +19,7 @@ class HomeController extends Controller
     public function index()
     {
       $courses = Course::all();
-      $products = Product::all();
+      $products = Product::orderBy('name','ASC')->get();
       $covers = Simage::all();
       $articles = Article::all();
 
