@@ -16,7 +16,7 @@
           </a>
         </li>
         <li>
-          <a class="white-text" target="_blank" href="https://www.facebook.com/wtcqueretaro/">
+          <a class="white-text" target="_blank" href="https://www.facebook.com/maritelascountry/">
             ¡PONTE EN CONTACTO CON NOSOTROS!
           </a>
         </li>
@@ -42,7 +42,7 @@
             </a>
           </li>
           <li>
-            <a class="white-text" target="_blank" href="https://www.facebook.com/wtcqueretaro/" style="font-size:10px">
+            <a class="white-text" target="_blank" href="https://www.facebook.com/maritelascountry/" style="font-size:10px">
               ¡PONTE EN CONTACTO CON NOSOTROS!
             </a>
           </li>

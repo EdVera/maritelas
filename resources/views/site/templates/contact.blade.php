@@ -7,7 +7,7 @@
           <div class="row valign-wrapper nobottom">
             <div class="col s3"><i class="fa fa-phone right" aria-hidden="true" style="font-size: 33px;color:#5d5d5d"></i></div>
             <div class="col s9 left-align" style="padding-left:0">
-              <p class="nobottom notop" style="color:#f3357f;font-size:18px;font-weight:900">LLÁMANOS AHORA <br><a style="color:#5d5d5d;font-weight:100;font-size:13px" href="tel:4626071044"> 4626071044 </a></p>
+              <p class="nobottom notop" style="color:#f3357f;font-size:18px;font-weight:900">LLÁMANOS AHORA <br><a target="_blank" style="color:#5d5d5d;font-weight:100;font-size:13px" href="tel:4626071044"> 4626071044 </a></p>
             </div>
           </div>
         </div>
@@ -15,7 +15,7 @@
           <div class="row valign-wrapper nobottom">
             <div class="col s2" style="padding:0"><i class="fa fa-envelope-o left" aria-hidden="true" style="font-size: 33px;color:#5d5d5d"></i></div>
             <div class="col s10 left-align" style="padding-left:0">
-              <p class="nobottom notop" style="color:#f3357f;font-size:18px;font-weight:900">ESCRÍBENOS <br><a style="color:#5d5d5d;font-weight:100;font-size:13px" href="mailto:direccion-comercial@gp.org.mx?Subject=Requiero"> contacto@maritelascountry.mx</a></p>
+              <p class="nobottom notop" style="color:#f3357f;font-size:18px;font-weight:900">ESCRÍBENOS <br><a target="_blank" style="color:#5d5d5d;font-weight:100;font-size:13px" href="mailto:direccion-comercial@gp.org.mx?Subject=Requiero"> contacto@maritelascountry.mx</a></p>
             </div>
           </div>
         </div>
@@ -48,7 +48,7 @@
               <button class="btn-flat transparent" type="submit" style="width:100%;color:#f3357f;font-weight:100;border:1px solid #f3357f; padding: 2px 2px;height:50px;font-size:20px;font-weight:900">¡ENVIAR!</button>
             </div>
             <div class="col s12 m6" style="margin-top:14px;padding-right:0px">
-              <a href="{{ $whats }}">
+              <a target="_blank" href="{{ $whats }}">
                 <div class="row valign-wrapper nobottom" style="background-color: #80c357;height:50px">
                   <div class="col s2">
                     <i class="fa fa-whatsapp fa-2x" style="color:white;font-size:2.6em"></i>

@@ -39,7 +39,7 @@
 
 <!-- [Social]-->
   <div class="row nobottom" style="background-color:#80c357">
-    <a href="https://www.facebook.com/maritelascountry/">
+    <a href="https://www.facebook.com/maritelascountry/" target="_blank">
       <div class="col s4" style="color:#f3357f;background-color:white">
         <div class="row nobottom valign-wrapper">
           <div class="col s10 offset-s1 m2" style="padding-right:0px">
@@ -51,7 +51,7 @@
         </div>
       </div>
     </a>
-    <a href="https://www.instagram.com/maritelascountrymexico/">
+    <a href="https://www.instagram.com/maritelascountrymexico/" target="_blank">
       <div class="col s4" style="color:#f3357f;background-color:white">
         <div class="row nobottom valign-wrapper">
           <div class="col s10 offset-s1 m2" style="padding-right:0px">
@@ -99,8 +99,8 @@
               {{ $course->description }}
             </p>
             <div class="bottom-fixed center">
-              <a href="tel:4626071044"><i class="fa fa-phone fa-2x socialcourse" style="font-size:1.75em;padding-top:7px"></i></a>
-              <a href="{{ $course->whatsapp }}"><i class="fa fa-whatsapp fa-2x socialcourse" style="padding-top:3px"></i></a>
+              <a target="_blank" href="tel:4626071044"><i class="fa fa-phone fa-2x socialcourse" style="font-size:1.75em;padding-top:7px"></i></a>
+              <a target="_blank" href="{{ $course->whatsapp }}"><i class="fa fa-whatsapp fa-2x socialcourse" style="padding-top:3px"></i></a>
             </div>
           </div>
         </div>
@@ -137,8 +137,8 @@
                   <span class="card-title white-text" style="font-size:15px">{{$product->name}}<i class="material-icons right">close</i></span>
                   <p class="center" style="font-size:13px">{{ $product->description }}.</p>
                   <div class="bottom-fixed center">
-                    <a href="tel:4626071044"><i class="fa fa-phone fa-2x socialproduct" style="font-size:1.75em;padding-top:7px"></i></a>
-                    <a href="{{ $product->whatsapp }}"><i class="fa fa-whatsapp fa-2x socialproduct" style="padding-top:3px"></i></a>
+                    <a target="_blank" href="tel:4626071044"><i class="fa fa-phone fa-2x socialproduct" style="font-size:1.75em;padding-top:7px"></i></a>
+                    <a target="_blank" href="{{ $product->whatsapp }}"><i class="fa fa-whatsapp fa-2x socialproduct" style="padding-top:3px"></i></a>
                   </div>
                 </div>
               </div>
@@ -187,7 +187,7 @@
   <div class="" id="articles" style="margin:0px 50px;padding-top:20px;padding-bottom:20px">
       @foreach ($articles as $article)
         <div class="card z-depth-4" style="margin-left:10px;margin-right:10px">
-          <div class="card-content" style=";background-color:#fafafa;height:180px;position:relative">
+          <div class="card-content" style=";background-color:#fafafa;height:150px;position:relative">
             <h6 style="color:#f3357f;font-weight:700;margin-top:0px;font-size:20px">{{ strtoupper($article->title) }}</h6>
             <p style="font-weight:100; font-size:15px;color:#ff1c74">
               {{ $article->description }}
@@ -202,7 +202,7 @@
             </div>
           </div>
           <div class="card-image">
-            <img src="{{ asset('img/articles/' . $article->image) }}" style="height:25vh">
+            <img src="{{ asset('img/articles/' . $article->image) }}" style="height:30vh">
           </div>
         </div>
       @endforeach

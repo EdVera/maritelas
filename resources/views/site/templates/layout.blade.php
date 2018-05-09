@@ -20,10 +20,10 @@
 	</head>
 	<body>
 
-		@if (Route::currentRouteName() == 'site.blog.index')
-			@include('site.templates.navblog')
-		@else
+		@if (Route::currentRouteName() == 'site.index')
 			@include('site.templates.nav')
+		@else
+			@include('site.templates.navblog')
 		@endif
 
 		@yield('body-content')

@@ -4,9 +4,9 @@
     <div class="nav-wrapper" height="40px">
       <ul>
         <li>
-          <a href="tel:4624201075" class="white-text">
+          <a href="tel:4626071044" class="white-text">
             <i style="font-size: 13px;" class="material-icons left">phone</i>
-            <span style="font-size: 13px;">+52 (1) 4624201075</span>
+            <span style="font-size: 13px;">+52 (1) 4626071044</span>
           </a>
         </li>
         <li>
@@ -16,7 +16,7 @@
           </a>
         </li>
         <li>
-          <a class="white-text" target="_blank" href="https://www.facebook.com/wtcqueretaro/">
+          <a class="white-text" target="_blank" href="https://www.facebook.com/maritelascountry/">
             ¡PONTE EN CONTACTO CON NOSOTROS!
           </a>
         </li>
@@ -24,15 +24,15 @@
     </div>
   </nav>
 </div>
-  <!-- End little nav bar for desktop -->
+<!-- End little nav bar for desktop -->
 
-  <!-- Little nav bar for mobil -->
+<!-- Little nav bar for mobil -->
   <div class="navbar-fixed hide-on-large-only" style="height: 40px">
     <nav style="z-index: 4;height:40px" role="navigation" class="z-depth-0" id="topnavmovil">
       <div class="nav-wrapper" height="40px">
         <ul>
           <li>
-            <a href="tel:4624201075" class="white-text">
+            <a href="tel:4626071044" class="white-text">
               <i style="font-size: 13px;" class="material-icons center">phone</i>
             </a>
           </li>
@@ -42,7 +42,7 @@
             </a>
           </li>
           <li>
-            <a class="white-text" target="_blank" href="https://www.facebook.com/wtcqueretaro/" style="font-size:10px">
+            <a class="white-text" target="_blank" href="https://www.facebook.com/maritelascountry/" style="font-size:10px">
               ¡PONTE EN CONTACTO CON NOSOTROS!
             </a>
           </li>
