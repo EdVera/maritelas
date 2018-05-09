@@ -147,7 +147,7 @@
               @if ($j==1)
               </div>
                 </div>
-                <div class="">
+                <div class="" style="margin-top:38px">
                   <div class="row">
                   @php
                     $i=0;
