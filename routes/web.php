@@ -69,6 +69,10 @@ Route::group(['prefix' => 'admin'], function() {
 			'uses'	=>	'ArticlesController@destroy',
 			'as' 	=>	'articles.destroy'
 		]);
+	Route::get('articles/{id}/{img}/destroysingleimage', [
+			'uses'	=>	'ArticlesController@destroysingleimage',
+			'as' 	=>	'articles.destroysingleimage'
+		]);
 
 });
 

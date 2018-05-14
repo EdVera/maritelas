@@ -91,5 +91,14 @@
     {!! Form::close() !!}
   </fieldset>
 
+  <div class="section row">
+    @foreach ($article->images as $img)
+    <div class="col s3">
+      <img src="{{ asset('img/articles/'.$img->name) }}" style="width:100%">
+      <a href="{{ route('articles.edit', $img->id) }}" class="btn yellow darken-1"><i class="material-icons">edit</i></a>
+      <a href="{{ $img->id }}/destroysingleimage" class="btn red lighten-1"><i class="material-icons">delete</i></a>
+    </div>
+    @endforeach
+  </div>
 
 @endsection

@@ -167,4 +167,12 @@ class ArticlesController extends Controller
         return redirect()->route('articles.index');
 
     }
+    public function destroysingleimage($id,$img)
+    {
+        $article =ArticleImage::find($img);
+        $article->delete();
+
+        return redirect()->route('articles.edit',$id);
+
+    }
 }
