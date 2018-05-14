@@ -22,7 +22,8 @@
   			<tr>
   				<th>Foto</th>
           <th>Título</th>
-  				<th>Subtítulo</th>
+					<th>Subtítulo</th>
+  				<th>Posición</th>
   				<th>Acción</th>
   			</tr>
   		</thead>
@@ -33,7 +34,8 @@
 						<img src="{{ asset('img/slider/'.$image->name) }}" alt="Telas" style="max-width:150px">
 					</td>
   				<td>{{ $image->title }}</td>
-          <td>{{ $image->subtitle }}</td>
+					<td>{{ $image->subtitle }}</td>
+          <td>{{ $image->position }}</td>
   				<td>
 						<a href="{{ route('simages.edit', $image->id) }}" class="btn yellow lighten-1"><i class="material-icons">edit</i></a>
   					<a href="{{ route('simages.destroy', $image->id) }}" class="btn red lighten-1"><i class="material-icons">delete</i></a>
@@ -61,6 +63,12 @@
 	  		<div class="input-field col s12 m12">
 	  			{!! Form::label('subtitle', 'Subtítulo') !!}
 	  			{!! Form::text('subtitle',null,['class' => 'validate',  'required' => 'required']) !!}
+	  		</div>
+	  	</div>
+			<div class="row">
+	  		<div class="input-field col s12 m12">
+	  			{!! Form::label('position', 'Posición') !!}
+	  			{!! Form::text('position',null,['class' => 'validate',  'required' => 'required']) !!}
 	  		</div>
 	  	</div>
 			<div class="row">

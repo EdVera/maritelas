@@ -40,16 +40,23 @@ class ArticlesController extends Controller
     public function store(Request $request)
     {
       $aux = 0;
+      $path = public_path() . '/img/articles/';
 
       $article = new Article($request->all());
       $slug = Str::slug($article->title);
       $article->slug = $slug;
+      $article->text = str_replace("\n","<br>", $article->text);
 
       if ($request->hasFile('cover')) {
-        $name = 'maritelas_'. $aux . time() . '.' . $request->cover->getClientOriginalExtension();
-        $path = public_path() . '/img/articles/';
+        $name = 'cover_'. $aux . time() . '.' . $request->cover->getClientOriginalExtension();
         $request->cover->move($path, $name);
         $article->image = $name;
+      }
+
+      if ($request->hasFile('imgmini')) {
+        $name = 'imgmini_'. $aux . time() . '.' . $request->cover->getClientOriginalExtension();
+        $request->imgmini->move($path, $name);
+        $article->imgmini = $name;
       }
 
       $article->save();
@@ -59,7 +66,6 @@ class ArticlesController extends Controller
           //$file = $request->file('image');
           $aux++;
           $name = 'maritelas_'. $aux . time() . '.' . $file->getClientOriginalExtension();
-          $path = public_path() . '/img/articles/';
           $file->move($path, $name);
 
           $img = new ArticleImage();
@@ -93,6 +99,7 @@ class ArticlesController extends Controller
     public function edit($id)
     {
       $article = Article::find($id);
+      $article->text = str_replace("<br>","\n", $article->text);
       return view('admin.articles.edit')->with("article",$article);
     }
 
@@ -106,18 +113,25 @@ class ArticlesController extends Controller
     public function update(Request $request, $id)
     {
       $aux = 0;
+      $path = public_path() . '/img/articles/';
 
       $article = Article::find($id);
       $article->title = $request->title;
       $article->description = $request->description;
       $article->text = $request->text;
+      $article->text = str_replace("\n","<br>", $article->text);
       $article->video = $request->video;
 
       if ($request->hasFile('cover')) {
         $name = 'maritelas_'. $aux . time() . '.' . $request->cover->getClientOriginalExtension();
-        $path = public_path() . '/img/articles/';
         $request->cover->move($path, $name);
         $article->image = $name;
+      }
+
+      if ($request->hasFile('imgmini')) {
+        $name = 'imgmini_'. $aux . time() . '.' . $request->cover->getClientOriginalExtension();
+        $request->imgmini->move($path, $name);
+        $article->imgmini = $name;
       }
 
       $article->save();
@@ -127,7 +141,6 @@ class ArticlesController extends Controller
           //$file = $request->file('image');
           $aux++;
           $name = 'maritelas_'. $aux . time() . '.' . $file->getClientOriginalExtension();
-          $path = public_path() . '/img/articles/';
           $file->move($path, $name);
 
           $img = new ArticleImage();

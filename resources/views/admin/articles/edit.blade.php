@@ -13,6 +13,11 @@
   <fieldset id="fieldset-content" class="col s12">
     <p> Agrega un nuevo artículo al blog.</p>
     <hr>
+    <div class="row">
+      <div class="col s6 offset-s3 m4 offset-m4">
+        <img src="{{ asset('img/articles/'.$article->image) }}" style="width:100%">
+      </div>
+    </div>
     {!! Form::open(['route' => ['articles.update',$article], 'files' => true, 'method' => 'PUT', 'id' => 'formcreate']) !!}
     <div class="row">
       <div class="input-field col s12 m10 offset-m1">
@@ -24,7 +29,19 @@
     <div class="row">
       <div class="file-field input-field col s12 m10 offset-m1">
         <div class="btn blue">
-          <span>Imagen</span>
+          <span>Home</span>
+          {!! Form::file('imgmini') !!}
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text" placeholder="Elige una imagen para el preview en Home.">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="file-field input-field col s12 m10 offset-m1">
+        <div class="btn blue">
+          <span>Blog</span>
           {!! Form::file('cover') !!}
         </div>
         <div class="file-path-wrapper">

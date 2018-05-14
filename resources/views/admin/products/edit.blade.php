@@ -13,6 +13,11 @@
   <fieldset id="fieldset-content" class="col s12">
     <p> Edita la información de tu producto: {{ $product->name }}.</p>
     <hr>
+    <div class="row">
+      <div class="col s6 offset-s3 m4 offset-m4">
+        <img src="{{ asset('img/products/'.$product->image) }}" style="width:100%">
+      </div>
+    </div>
     {!! Form::open(['route' => ['products.update',$product], 'files' => true, 'method' => 'PUT', 'id' => 'formcreate']) !!}
     <div class="row">
       <div class="input-field col s12 m12">

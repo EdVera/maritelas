@@ -35,6 +35,11 @@
     #contacto h5{
       color: white;
     }
+
+    iframe{
+      width: 560px !important;
+      height: 315px !important;
+    }
   </style>
 @endsection
 
@@ -55,7 +60,7 @@
   <h1 class="" style="margin-left: 70px;font-size:30px; margin-top:0px;margin-bottom: 5px;padding-top:80px">{{ strtoupper($article->title) }}</h1>
   <h3 class="" style="margin-left: 70px;font-size:16px; margin-top:0px;margin-bottom: 30px;">{{ $article->created_at->format('d/m/Y') }}</h3>
   <div class="col s10 offset-s1 m6" style="padding:0px 30px 20px 70px;background-color:white">
-    <p>{{ $article->text }}</p>
+    <p>{!! $article->text !!}</p>
   </div>
   <div id="video" class="col s10 offset-s1 m6" style="padding:20px 70px 20px 30px">
     <div class="section slider-for">
@@ -66,7 +71,7 @@
       @endforeach
     </div>
 
-    <div class=" section slider-nav">
+    <div class="section slider-nav">
       @foreach ($article->images as $image)
         <div>
           <img src="{{ asset('img/articles/' . $image->name)}}" style="width:90%;margin:auto">
@@ -77,12 +82,12 @@
 </div>
 <!-- End [Article text]-->
 
-<!-- [Gallery]-->
+<!-- [Video]-->
 <div class="section center">
   {!! $article->video !!}
 </div>
 
-<!-- End [Gallery]-->
+<!-- End [Video]-->
 
 <!-- [Contact banner]-->
 <div class="section banner">

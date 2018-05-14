@@ -13,6 +13,11 @@
   <fieldset id="fieldset-content" class="col s12">
     <p> Edita la información de tu curso: {{ $course->name }}.</p>
     <hr>
+    <div class="row">
+      <div class="col s6 offset-s3 m4 offset-m4">
+        <img src="{{ asset('img/courses/'.$course->image) }}" style="width:100%">
+      </div>
+    </div>
     {!! Form::open(['route' => ['courses.update',$course], 'files' => true, 'method' => 'PUT', 'id' => 'formcreate']) !!}
     <div class="row">
       <div class="input-field col s12 m12">
@@ -24,6 +29,12 @@
       <div class="input-field col s12 m12">
         {!! Form::label('description', 'Descripción') !!}
         {!! Form::text('description',$course->description,['class' => 'validate',  'required' => 'required']) !!}
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m12">
+        {!! Form::label('position', 'Posición') !!}
+        {!! Form::text('position',$course->position,['class' => 'validate',  'required' => 'required']) !!}
       </div>
     </div>
     <div class="row">

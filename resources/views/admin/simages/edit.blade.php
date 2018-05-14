@@ -13,6 +13,11 @@
   <fieldset id="fieldset-content" class="col s12">
     <p> Edita la información de tu imágen: {{ $cover->title }}.</p>
     <hr>
+    <div class="row">
+      <div class="col s6 offset-s3 m4 offset-m4">
+        <img src="{{ asset('img/slider/'.$cover->name) }}" style="width:100%">
+      </div>
+    </div>
     {!! Form::open(['route' => ['simages.update',$cover], 'files' => true, 'method' => 'PUT', 'id' => 'formcreate']) !!}
     <div class="row">
       <div class="input-field col s12 m12">
@@ -24,6 +29,12 @@
       <div class="input-field col s12 m12">
         {!! Form::label('subtitle', 'Subtítulo') !!}
         {!! Form::text('subtitle',$cover->subtitle,['class' => 'validate',  'required' => 'required']) !!}
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m12">
+        {!! Form::label('position', 'Posición') !!}
+        {!! Form::text('position',$cover->position,['class' => 'validate',  'required' => 'required']) !!}
       </div>
     </div>
     <div class="row">

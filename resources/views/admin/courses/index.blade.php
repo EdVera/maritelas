@@ -22,7 +22,8 @@
   			<tr>
   				<th>Foto</th>
           <th>Curso</th>
-  				<th>Descripción</th>
+					<th>Descripción</th>
+  				<th>Posición</th>
   				<th>Acción</th>
   			</tr>
   		</thead>
@@ -33,7 +34,8 @@
 						<img src="{{ asset('img/courses/'.$course->image) }}" alt="Telas" style="max-width:150px">
 					</td>
   				<td>{{ $course->name }}</td>
-          <td>{{ $course->description }}</td>
+					<td>{{ $course->description }}</td>
+          <td>{{ $course->position }}</td>
   				<td>
 						<a href="{{ route('courses.edit', $course->id) }}" class="btn yellow darken-2"><i class="material-icons">edit</i></a>
 						<a href="{{ route('courses.destroy', $course->id) }}" class="btn red lighten-1"><i class="material-icons">delete</i></a>
@@ -61,6 +63,12 @@
 	  		<div class="input-field col s12 m12">
 	  			{!! Form::label('description', 'Descripción') !!}
 	  			{!! Form::text('description',null,['class' => 'validate',  'required' => 'required']) !!}
+	  		</div>
+	  	</div>
+			<div class="row">
+	  		<div class="input-field col s12 m12">
+	  			{!! Form::label('position', 'Posición') !!}
+	  			{!! Form::text('position',null,['class' => 'validate',  'required' => 'required']) !!}
 	  		</div>
 	  	</div>
 			<div class="row">

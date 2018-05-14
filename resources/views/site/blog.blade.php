@@ -54,7 +54,7 @@
                 </div>
               </div>
             </div>
-            <div class="col s12 m6" style="padding:0;background-image:url('{{ asset('img/articles/' . $article->image) }}'); height:312px">
+            <div class="col s12 m6" style="padding:0;background-image:url('{{ asset('img/articles/' . $article->image) }}'); background-size: cover;height:312px">
             </div>
           </div>
           <div class="row">

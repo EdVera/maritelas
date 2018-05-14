@@ -16,7 +16,7 @@ class SimagesController extends Controller
      */
     public function index()
     {
-        $simages = Simage::all();
+        $simages = Simage::orderBy('position')->get();
         return view('admin.simages.index')->with('images',$simages);
     }
 
@@ -48,6 +48,7 @@ class SimagesController extends Controller
           $image->name = $name;
           $image->title = $request->title;
           $image->subtitle = $request->subtitle;
+          $image->position = $request->position;
           $image->save();
         }
 
@@ -89,6 +90,7 @@ class SimagesController extends Controller
         $cover = Simage::find($id);
         $cover->title = $request->title;
         $cover->subtitle = $request->subtitle;
+        $cover->position = $request->position;
         if ($request->hasFile('image')) {
           $file = $request->file('image');
           $name = 'maritelas' . time() . '.' . $file->getClientOriginalExtension();

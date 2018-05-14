@@ -24,11 +24,23 @@
     <div class="row">
       <div class="file-field input-field col s12 m10 offset-m1">
         <div class="btn blue">
-          <span>Imagen</span>
+          <span>Home</span>
+          {!! Form::file('imgmini') !!}
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text" placeholder="Elige una imagen para el preview en Home.">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="file-field input-field col s12 m10 offset-m1">
+        <div class="btn blue">
+          <span>Blog</span>
           {!! Form::file('cover') !!}
         </div>
         <div class="file-path-wrapper">
-          <input class="file-path validate" type="text" placeholder="Elige una imagen.">
+          <input class="file-path validate" type="text" placeholder="Elige una imagen para el blog.">
         </div>
       </div>
     </div>
