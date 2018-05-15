@@ -100,7 +100,9 @@ class ArticlesController extends Controller
     {
       $article = Article::find($id);
       $article->text = str_replace("<br>","\n", $article->text);
-      return view('admin.articles.edit')->with("article",$article);
+      $imagenes = $article->images;
+
+      return view('admin.articles.edit')->with("article",$article)->with('imagenes',$imagenes);
     }
 
     /**
@@ -165,6 +167,22 @@ class ArticlesController extends Controller
         $article->delete();
 
         return redirect()->route('articles.index');
+
+    }
+    public function editsingleimage(Request $request,$id,$img)
+    {
+        $img =ArticleImage::find($img);
+
+        return view('admin.articles.editimg')->with('img',$img);
+
+    }
+    public function updatesingleimage(Request $request,$img)
+    {
+        $img =ArticleImage::find($img);
+        $img->position = $request->position;
+        $img->save();
+
+        return redirect()->route('articles.edit',$img->article_id);
 
     }
     public function destroysingleimage($id,$img)

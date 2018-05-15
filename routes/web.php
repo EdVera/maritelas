@@ -73,6 +73,14 @@ Route::group(['prefix' => 'admin'], function() {
 			'uses'	=>	'ArticlesController@destroysingleimage',
 			'as' 	=>	'articles.destroysingleimage'
 		]);
+	Route::post('articles/{img}/updatesingleimage', [
+			'uses'	=>	'ArticlesController@updatesingleimage',
+			'as' 	=>	'articles.updatesingleimage'
+		]);
+	Route::get('articles/{id}/{img}/editsingleimage', [
+			'uses'	=>	'ArticlesController@editsingleimage',
+			'as' 	=>	'articles.editsingleimage'
+		]);
 
 });
 
