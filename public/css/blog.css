@@ -1,0 +1,39 @@
+.card .card-content{
+  padding: 14px
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.slick-slide:focus { outline: none; }
+
+#blog {
+  margin:10px 50px;
+}
+
+
+@media only screen and (min-device-width: 1024px){
+  #blog {
+    margin:10px 10px;
+  }
+
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+  #blog {
+    margin:10px 10px;
+  }
+
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 767px) {
+  #blog {
+    margin:10px 10px;
+  }
+
+  .linkinfo{
+    font-size: 12px;
+  }
+}

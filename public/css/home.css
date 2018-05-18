@@ -73,6 +73,10 @@ left:0px;
   right: 27px !important;
 }
 
+#blog {
+  margin:10px 50px;
+}
+
 .slick-dots li button:before
 {
   font-size: 16px;
@@ -204,7 +208,7 @@ left:0px;
   color:white; font-size:30px
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 767px) {
   .row.valign-wrapper {
     display: inherit;
   }
@@ -220,6 +224,14 @@ left:0px;
 
   #slider h3{
     color:white; font-size:20px
+  }
+
+  #blog {
+    margin:10px 10px;
+  }
+
+  .linkinfo{
+    font-size: 12px;
   }
 
 }

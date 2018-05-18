@@ -52,6 +52,7 @@
   </div>
 <!-- Nav menu -->
 
+{{-- NAV --}}
 <!-- For desktop -->
 <div class="navbar-fixed hide-on-med-and-down" style="height:78px">
   <nav role="navigation" id="undernav">
@@ -63,6 +64,7 @@
         <img class="menupe" src="{{ asset('img/logo/simple.png') }}" class="hide">
       </a>
       <ul class="right" style="margin-right:50px">
+        @if (Route::currentRouteName() == 'site.index')
         <li class="lh84" id="menuinicio">
           <a class="" onclick="toTop()">
             INICIO
@@ -88,6 +90,59 @@
             CONTACTO
           </a>
         </li>
+      @elseif (Route::currentRouteName() == 'site.blog.index')
+      <li class="lh84" id="menuinicio">
+        <a href="/">
+          INICIO
+        </a>
+      </li>
+      <li class="lh84" id="menucursos">
+        <a href="/#cursos">
+          CURSOS
+        </a>
+      </li>
+      <li class="lh84" id="menuproductos">
+        <a href="/#productos">
+          PRODUCTOS
+        </a>
+      </li>
+      <li class="lh84" id="menublog">
+        <a onclick="toTop()">
+          BLOG
+        </a>
+      </li>
+      <li class="lh84" id="menucontacto">
+        <a class="menu-link" href="#contacto">
+          CONTACTO
+        </a>
+      </li>
+      @elseif (Route::currentRouteName() == 'site.blog.article')
+      <li class="lh84" id="menuinicio">
+        <a href="/">
+          INICIO
+        </a>
+      </li>
+      <li class="lh84" id="menucursos">
+        <a href="/#cursos">
+          CURSOS
+        </a>
+      </li>
+      <li class="lh84" id="menuproductos">
+        <a href="/#productos">
+          PRODUCTOS
+        </a>
+      </li>
+      <li class="lh84" id="menublog">
+        <a href="{{ route('site.blog.index') }}">
+          BLOG
+        </a>
+      </li>
+      <li class="lh84" id="menucontacto">
+        <a class="menu-link" href="#contacto">
+          CONTACTO
+        </a>
+      </li>
+      @endif
       </ul>
     </div>
   </nav>
@@ -111,10 +166,24 @@
 
 <!-- Collapsible menu for movil -->
 <ul class="side-nav collapsible" id="mobile-demo"  data-collapsible="accordion">
-  <li><a href="Home" style="letter-spacing:1px">INICIO</a></li>
-  <li><a href="Home" style="letter-spacing:1px">PRODUCTOS</a></li>
-  <li><a href="Home" style="letter-spacing:1px">BLOG</a></li>
-  <li><a href="Home" style="letter-spacing:1px">CURSOS</a></li>
-  <li><a href="Home" style="letter-spacing:1px">CONTACTO</a></li>
+@if (Route::currentRouteName() == 'site.index')
+    <li><a onclick="toTop()" style="letter-spacing:1px">INICIO</a></li>
+    <li><a href="#productos" style="letter-spacing:1px">PRODUCTOS</a></li>
+    <li><a href="/blog" style="letter-spacing:1px">BLOG</a></li>
+    <li><a href="#cursos" style="letter-spacing:1px">CURSOS</a></li>
+    <li><a href="#contacto" style="letter-spacing:1px">CONTACTO</a></li>
+@elseif (Route::currentRouteName() == 'site.blog.index')
+    <li><a href="/" style="letter-spacing:1px">INICIO</a></li>
+    <li><a href="/#productos" style="letter-spacing:1px">PRODUCTOS</a></li>
+    <li><a onclick="toTop()" style="letter-spacing:1px">BLOG</a></li>
+    <li><a href="/#cursos" style="letter-spacing:1px">CURSOS</a></li>
+    <li><a href="#contacto" style="letter-spacing:1px">CONTACTO</a></li>
+@elseif (Route::currentRouteName() == 'site.blog.article')
+    <li><a href="/" style="letter-spacing:1px">INICIO</a></li>
+    <li><a href="/#productos" style="letter-spacing:1px">PRODUCTOS</a></li>
+    <li><a href="/blog" style="letter-spacing:1px">BLOG</a></li>
+    <li><a href="/#cursos" style="letter-spacing:1px">CURSOS</a></li>
+    <li><a href="#contacto" style="letter-spacing:1px">CONTACTO</a></li>
+@endif
 </ul>
 <!-- End mobil navigation -->

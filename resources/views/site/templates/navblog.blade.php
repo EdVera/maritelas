@@ -103,7 +103,6 @@
       <a href="Home">
         <img class="brand-logo center menulogomovil" src="{{ asset('img/logo/logo.png') }}" class=" logonav" id="logocolormovil">
       </a>
-
     </div>
   </nav>
 </div>

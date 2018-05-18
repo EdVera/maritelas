@@ -5,23 +5,13 @@
 @extends('site.templates.layout')
 
 @section('addCSS')
+  <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
   <style media="screen">
 
   body{
     background-image: url('{{ asset('img/assets/trans.png') }}');
     /* background-size: 1000px; */
   }
-
-  .card .card-content{
-    padding: 14px
-  }
-
-  .flex {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-  .slick-slide:focus { outline: none; }
 
   </style>
 @endsection
@@ -36,7 +26,7 @@
 <!-- End [Contact banner] -->
 
 <!-- [Blog]-->
-  <div class="" style="margin:10px 50px">
+  <div id="blog">
     <div class="row" style="padding:0 .75rem;">
       @foreach ($articles as $article)
         @if ($loop->first)
@@ -46,10 +36,10 @@
                 {{ $article->description }}
               </p>
               <div class="row nobottom" style="bottom:10px;left:0;width:100%;position:absolute">
-                <div class="col s12 m6">
+                <div class="col s6 m6 linkinfo">
                   <a style="color:#f335af ;" href="/blog/{{ $article->slug }}">SEGUIR LEYENDO >></a>
                 </div>
-                <div class="col s12 m6 right-align">
+                <div class="col s6 m6 linkinfo right-align">
                   <p style="color:#f335af ;">{{ $article->created_at->format('d M') }}</p>
                 </div>
               </div>
@@ -67,10 +57,10 @@
                   {{ $article->description }}
                 </p>
                 <div class="row nobottom" style="position:absolute;bottom:10px;left:0;width:100%;">
-                  <div class="col s12 m6">
+                  <div class="col s6 m6 linkinfo">
                     <a href="/blog/{{ $article->slug }}" style="color:#f335af">SEGUIR LEYENDO >></a>
                   </div>
-                  <div class="col s12 m6 right-align">
+                  <div class="col s6 m6 linkinfo right-align">
                     <p style="color:#f335af">{{ $article->created_at->format('d M') }}</p>
                   </div>
                 </div>
@@ -101,5 +91,34 @@
 @endsection
 
 @section('addScripts')
+  <script type="text/javascript">
+    $(document).ready(function(){
+       $('.collapsible').collapsible();
+     });
+
+    function mapQro() {
+      var x = document.getElementById("qro");
+      var y = document.getElementById("irapuato");
+      if (x.style.display === "none") {
+          x.style.display = "block";
+          y.style.display = "none";
+          $('#txtIr').hide();
+          $('#txtQro').show();
+           $('.collapsible').collapsible('close', 0);
+      }
+    }
+
+    function mapIrapuato() {
+      var x = document.getElementById("qro");
+      var y = document.getElementById("irapuato");
+      if (y.style.display === "none") {
+          y.style.display = "block";
+          x.style.display = "none";
+          $('#txtQro').hide();
+          $('#txtIr').show();
+           $('.collapsible').collapsible('close', 0);
+      }
+    }
+  </script>
 
 @endsection

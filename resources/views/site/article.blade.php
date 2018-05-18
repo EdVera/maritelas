@@ -119,6 +119,33 @@
     centerMode: true,
     focusOnSelect: true
   });
+    $(document).ready(function(){
+       $('.collapsible').collapsible();
+     });
+
+    function mapQro() {
+      var x = document.getElementById("qro");
+      var y = document.getElementById("irapuato");
+      if (x.style.display === "none") {
+          x.style.display = "block";
+          y.style.display = "none";
+          $('#txtIr').hide();
+          $('#txtQro').show();
+           $('.collapsible').collapsible('close', 0);
+      }
+    }
+
+    function mapIrapuato() {
+      var x = document.getElementById("qro");
+      var y = document.getElementById("irapuato");
+      if (y.style.display === "none") {
+          y.style.display = "block";
+          x.style.display = "none";
+          $('#txtQro').hide();
+          $('#txtIr').show();
+           $('.collapsible').collapsible('close', 0);
+      }
+    }
   </script>
 
 @endsection

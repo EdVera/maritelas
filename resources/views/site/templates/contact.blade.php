@@ -13,8 +13,8 @@
         </div>
         <div class="col s12 m6">
           <div class="row valign-wrapper nobottom">
-            <div class="col s2" style="padding:0"><i class="fa fa-envelope-o left" aria-hidden="true" style="font-size: 33px;color:#5d5d5d"></i></div>
-            <div class="col s10 left-align" style="padding-left:0">
+            <div class="col s3 m2" style="padding:0"><i class="fa fa-envelope-o right" aria-hidden="true" style="font-size: 33px;color:#5d5d5d"></i></div>
+            <div class="col s9 m10 left-align" style="padding-left:0">
               <p class="nobottom notop" style="color:#f3357f;font-size:18px;font-weight:900">ESCRÍBENOS <br><a target="_blank" style="color:#5d5d5d;font-weight:100;font-size:13px" href="mailto:direccion-comercial@gp.org.mx?Subject=Requiero"> contacto@maritelascountry.mx</a></p>
             </div>
           </div>
@@ -74,7 +74,9 @@
           <ul class="collapsible z-depth-0" style="border:none;color:white;background-color:rgba(243,53,127,.9);margin-top:0">
             <li onclick="mapQro()" style="border:none">
               <div class="collapsible-header active transparent center" style="display: block;padding: 2px 15px;border:none;text-align:center"><h5 class="center-align" style="font-weight:900">QUERÉTARO</h5></div>
-              <div class="collapsible-body transparent center" style="border:none;padding:2px">Plaza urban center jurica, planta alta frente a cinemex.</div>
+              <div class="collapsible-body transparent center" style="border:none;padding:2px">
+                Plaza Urban Center Jurica, Av. 5 de Febrero #9200, Local G-1, 1er Piso Pasillo Cinemex, Jurica, 76100, Santiago de Querétaro, Qro. 442.688.5346
+              </div>
             </li>
           </ul>
         </div>
@@ -83,7 +85,9 @@
           <ul class="collapsible z-depth-0" style="border:none;color:white;background-color:rgba(243,53,127,.9);margin-top:0">
             <li onclick="mapIrapuato()">
               <div class="collapsible-header transparent center" style="display: block;padding: 2px 15px;border:none;text-align:center"><h5 class="center-align" style="font-weight:900">IRAPUATO</h5></div>
-              <div class="collapsible-body transparent center" style="border:none;padding:2px">Plaza Jacarandas, Soriana, Av. Arboledas #1200 loc. 20B.</div>
+              <div class="collapsible-body transparent center" style="border:none;padding:2px">
+                Plaza Jacarandas, Soriana, Av. Arboledas #1200, Local B-20, Pasillo Principal, San Miguelito, 36690, Irapuato, Gto. 462.607.1044
+              </div>
             </li>
           </ul>
         </div>

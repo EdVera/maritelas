@@ -184,7 +184,7 @@
 <!-- [Blog]-->
 
 <div class="transbg">
-  <div class="" id="articles" style="margin:0px 50px;padding-top:20px;padding-bottom:20px">
+  <div class="" id="articles" style="padding-top:20px;padding-bottom:20px">
       @foreach ($articles as $article)
         <div class="card z-depth-4" style="margin-left:10px;margin-right:10px">
           <div class="card-content" style=";background-color:#fafafa;height:150px;position:relative">
@@ -193,10 +193,10 @@
               {{ $article->description }}
             </p>
             <div class="row nobottom" style="position:absolute;bottom:10px;left:0;width:100%;">
-              <div class="col s12 m6">
+              <div class="col s6 m6 linkinfo">
                 <a href="/blog/{{ $article->slug }}" style="color:#f335af">SEGUIR LEYENDO >></a>
               </div>
-              <div class="col s12 m6 right-align">
+              <div class="col s6 m6 linkinfo right-align">
                 <p style="color:#f335af">{{ $article->created_at->format('d M') }}</p>
               </div>
             </div>
