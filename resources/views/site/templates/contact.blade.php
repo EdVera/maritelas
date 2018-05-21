@@ -47,7 +47,7 @@
             <div class="col s12 m6 input-field but" style="padding-right:0px">
               <button class="btn-flat transparent" type="submit" style="width:100%;color:#f3357f;font-weight:100;border:1px solid #f3357f; padding: 2px 2px;height:50px;font-size:20px;font-weight:900">¡ENVIAR!</button>
             </div>
-            <div class="col s12 m6" style="margin-top:14px;padding-right:0px">
+            <div class="col s12 m6 hide-on-med-and-down" style="margin-top:14px;padding-right:0px">
               <a target="_blank" href="{{ $whats }}">
                 <div class="row valign-wrapper nobottom" style="background-color: #80c357;height:50px">
                   <div class="col s2">
@@ -55,6 +55,18 @@
                   </div>
                   <div class="col s10">
                     <h6 class="nobottom notop white-text left-align" style="font-weight:900;margin-left:54px">WHATSAPP</h6>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col s12 hide-on-large-only" style="margin-top:14px">
+              <a target="_blank" href="{{ $whats }}" style="width:100%">
+                <div class="row nobottom" style="background-color: #80c357;height:50px">
+                  <div class="col s2">
+                    <i class="fa fa-whatsapp fa-2x" style="color:white;font-size:44px;margin-top:2px"></i>
+                  </div>
+                  <div class="col s10" style="padding-top:14px">
+                    <h6 class="nobottom notop white-text left-align" style="font-weight:900;margin-left:22px;font-size:20px">WHATSAPP</h6>
                   </div>
                 </div>
               </a>
@@ -73,7 +85,7 @@
         <div class="col s6" style="padding:0 0.5em;">
           <ul class="collapsible z-depth-0" style="border:none;color:white;background-color:rgba(243,53,127,.9);margin-top:0">
             <li onclick="mapQro()" style="border:none">
-              <div class="collapsible-header active transparent center" style="display: block;padding: 2px 15px;border:none;text-align:center"><h5 class="center-align" style="font-weight:900">QUERÉTARO</h5></div>
+              <div class="collapsible-header active transparent center maptitle"><h5 class="center-align">QUERÉTARO</h5></div>
               <div class="collapsible-body transparent center" style="border:none;padding:2px">
                 Plaza Urban Center Jurica, Av. 5 de Febrero #9200, Local G-1, 1er Piso Pasillo Cinemex, Jurica, 76100, Santiago de Querétaro, Qro. 442.688.5346
               </div>
@@ -84,7 +96,7 @@
         <div class="col s6" style="padding:0 0.5em;">
           <ul class="collapsible z-depth-0" style="border:none;color:white;background-color:rgba(243,53,127,.9);margin-top:0">
             <li onclick="mapIrapuato()">
-              <div class="collapsible-header transparent center" style="display: block;padding: 2px 15px;border:none;text-align:center"><h5 class="center-align" style="font-weight:900">IRAPUATO</h5></div>
+              <div class="collapsible-header transparent center maptitle"><h5 class="center-align">IRAPUATO</h5></div>
               <div class="collapsible-body transparent center" style="border:none;padding:2px">
                 Plaza Jacarandas, Soriana, Av. Arboledas #1200, Local B-20, Pasillo Principal, San Miguelito, 36690, Irapuato, Gto. 462.607.1044
               </div>

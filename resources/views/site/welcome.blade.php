@@ -85,16 +85,15 @@
 <!-- End [Courses banner] -->
 
 <!-- [Courses]-->
-
 <div class="section bg">
-  <div id="courses" style="margin:10px 50px">
+  <div id="courses">
       @foreach ($courses as $course)
         <div class="card z-depth-4" style="margin-left:10px;margin-right:10px">
           <div class="card-image">
-            <img src="{{ asset('img/courses/' . $course->image) }}" style="height:45vh">
+            <img src="{{ asset('img/courses/' . $course->image) }}">
           </div>
-          <div class="card-content" style="padding:10px;background-color:#f7f8f9;height:200px;position:relative">
-            <h5 class="center" style="color:#f3357f;margin:0px 6px">{{ $course->name }}</h5>
+          <div class="card-content">
+            <h5 class="center">{{ $course->name }}</h5>
             <p class="center">
               {{ $course->description }}
             </p>
@@ -107,7 +106,6 @@
       @endforeach
   </div>
 </div>
-
 <!-- End [Courses] -->
 
 <!-- [Product banner]-->
@@ -118,7 +116,7 @@
 
 <!-- [Products]-->
 <div class="section bg" style="padding-top:0">
-  <div id="products" style="margin:10px 50px">
+  <div id="products">
     <div class="" style="margin-top:38px">
       <div class="row">
         @php

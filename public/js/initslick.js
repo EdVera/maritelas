@@ -14,8 +14,8 @@ $('#courses').slick({
   accessibility:true,
   slidesToShow: 3,
   slidesToScroll: 1,
-  prevArrow:"<button type='button' class='slick-prev' style='left:-50px'>Prev</button>",
-  nextArrow:"<button type='button' class='slick-next' style='right:-50px'>Next</button>",
+  prevArrow:"<button type='button' class='slick-prev' style='left:-0px'>Prev</button>",
+  nextArrow:"<button type='button' class='slick-next' style='right:-0px'>Next</button>",
   responsive: [
     {
       breakpoint: 1024,

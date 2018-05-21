@@ -94,11 +94,21 @@ nav#undernav-movil{
   padding-top: 0px;
 }
 
+.maptitle{
+  display: block;
+  padding: 2px 15px;
+  border:none;
+  text-align:center
+}
+
+.maptitle h5{
+  font-weight:900;
+}
 
 .socialfooter {
    padding: 10px;
-   padding-top: 13px;
-   font-size: 20px;
+   padding-top: 10px;
+   font-size: 20px !important;
    width: 40px;
    height: 40px;
    text-align: center;
@@ -107,4 +117,41 @@ nav#undernav-movil{
    border-radius: 50%;
    color: #f3357f;
    background-color: white;
+}
+
+.left300{
+  margin-left: 300px;
+}
+
+footer div{
+  padding: 10px 30px;
+}
+
+@media only screen and (min-width: 1024px){
+
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+
+}
+@media only screen and (min-width : 320px) and (max-width : 767px){
+  .maptitle h5{
+    font-size: 14px;
+  }
+
+  .collapsible-body{
+    font-size: 12px;
+  }
+
+  footer{
+    font-size: 13px;
+  }
+
+  footer div{
+    padding: 10px 30px;
+    text-align: center;
+  }
+
+  .left300{
+    margin-left: 0px;
+  }
 }

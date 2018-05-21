@@ -5,68 +5,39 @@
 @extends('site.templates.layout')
 
 @section('addCSS')
+  <link rel="stylesheet" href="{{ asset('css/article.css') }}">
   <style media="screen">
-    h1,h2,h3,h4,h5,h6{
-      color: #f3357f;
-    }
 
     body{
       background-image: url('{{ asset('img/assets/trans.png') }}');
-      /* background-size: 1000px; */
-    }
-
-    p{
-      /* color: ; */
-      font-weight: 100;
-      text-align: justify;
-      font-size: 18px
-
-    }
-    .slick-slide:focus { outline: none; }
-
-    #video iframe{
-      width: 100% !important;
     }
 
     .bgpink{
       background-image: url('{{ asset('img/assets/trans.png') }}');
     }
 
-    #contacto h5{
-      color: white;
-    }
-
-    iframe{
-      width: 560px !important;
-      height: 315px !important;
-    }
   </style>
 @endsection
 
 @section('body-content')
 <!-- START PAGE -->
 
-<!-- [Cover] -->
-{{-- <div class="parallax-container">
-  <div class="parallax"><img src="{{ asset('img/articles/' . $article->image) }}"></div>
-</div> --}}
-<!-- End [Cover] -->
-
-<!-- [Title]-->
-<!-- End [Title] -->
-
-<!-- [Article text]-->
+<!-- [Article]-->
 <div class="row white">
-  <h1 class="" style="margin-left: 70px;font-size:30px; margin-top:0px;margin-bottom: 5px;padding-top:80px">{{ strtoupper($article->title) }}</h1>
-  <h3 class="" style="margin-left: 70px;font-size:16px; margin-top:0px;margin-bottom: 30px;">{{ $article->created_at->format('d/m/Y') }}</h3>
-  <div class="col s10 offset-s1 m6" style="padding:0px 30px 20px 70px;background-color:white">
-    <p>{!! $article->text !!}</p>
+  <h1 class="article-title">
+    {{ strtoupper($article->title) }}
+  </h1>
+  <h3 class="article-date">
+    {{ $article->created_at->format('d/m/Y') }}
+  </h3>
+  <div class="col s10 offset-s1 m6 white">
+    <p class="article-text">{!! $article->text !!}</p>
   </div>
-  <div id="video" class="col s10 offset-s1 m6" style="padding:20px 70px 20px 30px">
+  <div id="article-slider" class="col s10 offset-s1 m6">
     <div class="section slider-for">
       @foreach ($article->images as $image)
         <div>
-          <img class="" src="{{ asset('img/articles/' . $image->name)}}" style="width:100%;margin:auto">
+          <img src="{{ asset('img/articles/' . $image->name)}}" style="width:100%;margin:auto">
         </div>
       @endforeach
     </div>

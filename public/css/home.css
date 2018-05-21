@@ -208,7 +208,42 @@ left:0px;
   color:white; font-size:30px
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 767px) {
+#courses {
+  margin:10px 50px;
+}
+
+#courses .card-image img{
+  height: 45vh;
+}
+
+#courses .card-content{
+  padding:10px 5px;
+  background-color:#f7f8f9;
+  height:200px;
+  position:relative
+}
+
+#courses .card-content h5{
+  color:#f3357f;
+  margin:0px;
+}
+
+#products {
+  margin:10px 50px;
+}
+
+@media only screen and (min-width: 1024px){
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #courses {
+    margin:10px 10px;
+  }
+
+}
+
+@media only screen and (min-width : 320px) and (max-width : 767px) {
   .row.valign-wrapper {
     display: inherit;
   }
@@ -224,6 +259,45 @@ left:0px;
 
   #slider h3{
     color:white; font-size:20px
+  }
+
+  #courses {
+    margin:10px 10px;
+  }
+
+  #courses .card-image img{
+    height: auto;
+  }
+
+  #courses .card-content{
+    height:auto;
+  }
+
+  #courses .bottom-fixed{
+  position: inherit;
+  width: 100%;
+  bottom: 0px;
+  left:0px;
+  }
+
+  #courses .slick-prev{
+    left: -7px !important;
+
+  }
+  #courses .slick-next{
+    right: 6px !important;
+  }
+
+  #products {
+    margin:10px 10px;
+  }
+
+  #products .slick-prev{
+    left: -7px !important;
+
+  }
+  #products .slick-next{
+    right: 6px !important;
   }
 
   #blog {
