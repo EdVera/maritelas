@@ -46,7 +46,7 @@ class ProductsController extends Controller
           $product = new Product;
           $product->name = $request->name;
           $product->description = $request->description;
-          $product->whatsapp = "https://api.whatsapp.com/send?phone=524423773581&text=".$wp;
+          $product->whatsapp = "https://api.whatsapp.com/send?phone=584144554494&text=".$wp;
           $product->image = $imgname;
           $product->save();
         }
@@ -90,7 +90,7 @@ class ProductsController extends Controller
       $wp = "Me%20gustaría%20saber%20más%20acerca%20de%20sus%20".$request->name;
       $product->name = $request->name;
       $product->description = $request->description;
-      $product->whatsapp = "https://api.whatsapp.com/send?phone=524423773581&text=".$wp;
+      $product->whatsapp = "https://api.whatsapp.com/send?phone=584144554494&text=".$wp;
       if ($request->hasFile('image')) {
         $file = $request->file('image');
         $imgname = 'maritelas' . time() . '.' . $file->getClientOriginalExtension();

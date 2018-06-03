@@ -1,9 +1,9 @@
 <footer class="page-footer" style="background-color:#f3357f">
   <div class="">
-    <a class="white-text" target="_blank" href="https://www.facebook.com/maritelascountry/"><i class="fa fa-facebook socialfooter"></i></a>
-    <a class="white-text" target="_blank" href="https://www.instagram.com/maritelascountrymexico/"><i class="fa fa-instagram socialfooter"></i></a>
-    <a class="white-text" target="_blank" href="tel:4626071044"><i class="fa fa-phone socialfooter"></i></a>
-    <a class="white-text" target="_blank" href="https://www.instagram.com/wtcqro/"><i class="fa fa-envelope-o socialfooter"></i></a>
+    <a id="fblink" class="white-text" target="_blank" href="https://www.facebook.com/maritelascountry/"><i class="fa fa-facebook socialfooter"></i></a>
+    <a id="iglink" class="white-text" target="_blank" href="https://www.instagram.com/maritelascountrymexico/"><i class="fa fa-instagram socialfooter"></i></a>
+    <a id="phlink" class="white-text" target="_blank" href="tel:4626071044"><i class="fa fa-phone socialfooter"></i></a>
+    <a id="emlink" class="white-text" target="_blank" href="mailto:direccion-comercial@gp.org.mx?Subject=Información"><i class="fa fa-envelope-o socialfooter"></i></a>
     <br class="hide-on-med-and-up">
     @if (Route::currentRouteName() == 'site.index')
     <a onclick="toTop()" class="menu-link white-text left300">Inicio</a> /

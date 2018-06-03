@@ -47,7 +47,7 @@ class CoursesController extends Controller
           $course->name = $request->name;
           $course->description = $request->description;
           $course->position = $request->position;
-          $course->whatsapp = "https://api.whatsapp.com/send?phone=524423773581&text=".$wp;
+          $course->whatsapp = "https://api.whatsapp.com/send?phone=584144554494&text=".$wp;
           $course->image = $imgname;
           $course->save();
         }
@@ -91,7 +91,7 @@ class CoursesController extends Controller
       $course->fill($request->all());
       $course->position = $request->position;
       $wp = "Me%20gustaría%20saber%20más%20acerca%20de%20su%20curso%20".$request->name;
-      $course->whatsapp = "https://api.whatsapp.com/send?phone=524423773581&text=".$wp;
+      $course->whatsapp = "https://api.whatsapp.com/send?phone=584144554494&text=".$wp;
 
       if ($request->hasFile('image')) {
         $file = $request->file('image');
