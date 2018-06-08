@@ -67,7 +67,7 @@
 		<script src="{{ asset('js/initslick.js') }}"></script>
 		<script type="text/javascript">
 		  var phonelink = document.getElementById('phonelink');
-		  button.addEventListener(
+		  phonelink.addEventListener(
 		    'click',
 		    function() {
 			  fbq('track', 'Lead');
@@ -76,7 +76,7 @@
 		  );
 
 			var whatslink = document.getElementById('whatslink');
-		  button.addEventListener(
+		  whatslink.addEventListener(
 		    'click',
 		    function() {
 			  fbq('track', 'Lead');
@@ -85,7 +85,7 @@
 		  );
 
 			var whatslinkmini = document.getElementById('whatslinkmini');
-		  button.addEventListener(
+		  whatslinkmini.addEventListener(
 		    'click',
 		    function() {
 			  fbq('track', 'Lead');
@@ -94,7 +94,7 @@
 		  );
 
 			var maillink = document.getElementById('maillink');
-		  button.addEventListener(
+		  maillink.addEventListener(
 		    'click',
 		    function() {
 			  fbq('track', 'Lead');
@@ -103,7 +103,7 @@
 		  );
 
 			var fblink = document.getElementById('fblink');
-		  button.addEventListener(
+		  fblink.addEventListener(
 		    'click',
 		    function() {
 			  fbq('track', 'Lead');
@@ -112,7 +112,7 @@
 		  );
 
 			var iglink = document.getElementById('iglink');
-		  button.addEventListener(
+		  iglink.addEventListener(
 		    'click',
 		    function() {
 			  fbq('track', 'Lead');
@@ -121,7 +121,7 @@
 		  );
 
 			var phlink = document.getElementById('phlink');
-		  button.addEventListener(
+		  phlink.addEventListener(
 		    'click',
 		    function() {
 			  fbq('track', 'Lead');
@@ -130,7 +130,7 @@
 		  );
 
 			var emlink = document.getElementById('emlink');
-		  button.addEventListener(
+		  emlink.addEventListener(
 		    'click',
 		    function() {
 			  fbq('track', 'Lead');
@@ -139,7 +139,7 @@
 		  );
 
 			var maillink = document.getElementById('maillink');
-		  button.addEventListener(
+		  maillink.addEventListener(
 		    'click',
 		    function() {
 			  fbq('track', 'Lead');
