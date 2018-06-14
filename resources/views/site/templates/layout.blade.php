@@ -21,7 +21,7 @@
 		<noscript>
 		 <img height="1" width="1" src="https://www.facebook.com/tr?id=1431005490339504&ev=PageView&noscript=1"/>
 		</noscript>
-		<!-- End Facebook Pixel Code -->
+		<!-- End Facebook Pixel Codeeeeee -->
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120136974-1"></script>
 		<script>
@@ -47,7 +47,7 @@
 		<script src="{{ asset('plugins/fontawesome/fontawesome.min.js') }}"></script>
 		@yield('addCSS')
 	</head>
-	<body>
+	<body class"hola"> 
 
 		@include('site.templates.nav')
 
@@ -66,5 +66,8 @@
 	<script src="{{ asset('js/init.js') }}"></script>
 	<script src="{{ asset('plugins/slick/slick.js') }}"></script>
 	<script src="{{ asset('js/initslick.js') }}"></script>
+	<script>
+		console.log('Hola');	
+	</script>
 	@yield('addScripts')
 </html>
