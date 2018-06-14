@@ -4,13 +4,13 @@
     <div class="nav-wrapper" height="40px">
       <ul>
         <li>
-          <a href="tel:4626071044" class="white-text">
+          <a id="phonenav" href="tel:4626071044" class="white-text">
             <i style="font-size: 13px;" class="material-icons left">phone</i>
             <span style="font-size: 13px;">+52 (1) 4626071044</span>
           </a>
         </li>
         <li>
-          <a href="mailto:contacto@maritelascountry.com.mx?Subject=Hola" target="_top" class="white-text">
+          <a id="mailnav" href="mailto:contacto@maritelascountry.com.mx?Subject=Hola" target="_top" class="white-text">
             <i style="font-size: 13px;" class="material-icons left ">mail</i>
             <span style="font-size: 13px;">contacto@maritelascountry.com.mx</span>
           </a>
@@ -32,12 +32,12 @@
       <div class="nav-wrapper" height="40px">
         <ul>
           <li>
-            <a href="tel:4626071044" class="white-text">
+            <a id="phonenavmobil" href="tel:4626071044" class="white-text">
               <i style="font-size: 13px;" class="material-icons center">phone</i>
             </a>
           </li>
           <li>
-            <a href="mailto:contacto@maritelascountry.com.mx?Subject=Hola" target="_top" class="white-text">
+            <a id="mailnavmobil" href="mailto:contacto@maritelascountry.com.mx?Subject=Hola" target="_top" class="white-text">
               <i style="font-size: 13px;" class="material-icons center ">mail</i>
             </a>
           </li>
@@ -81,7 +81,7 @@
           </a>
         </li>
         <li class="lh84" id="menublog">
-          <a href="{{ route('site.blog.index') }}">
+          <a id="" href="{{ route('site.blog.index') }}">
             BLOG
           </a>
         </li>
@@ -92,17 +92,17 @@
         </li>
       @elseif (Route::currentRouteName() == 'site.blog.index')
       <li class="lh84" id="menuinicio">
-        <a href="/">
+        <a id="" href="/">
           INICIO
         </a>
       </li>
       <li class="lh84" id="menucursos">
-        <a href="/#cursos">
+        <a id="" href="/#cursos">
           CURSOS
         </a>
       </li>
       <li class="lh84" id="menuproductos">
-        <a href="/#productos">
+        <a id="" href="/#productos">
           PRODUCTOS
         </a>
       </li>
@@ -118,22 +118,22 @@
       </li>
       @elseif (Route::currentRouteName() == 'site.blog.article')
       <li class="lh84" id="menuinicio">
-        <a href="/">
+        <a id="" href="/">
           INICIO
         </a>
       </li>
       <li class="lh84" id="menucursos">
-        <a href="/#cursos">
+        <a id="" href="/#cursos">
           CURSOS
         </a>
       </li>
       <li class="lh84" id="menuproductos">
-        <a href="/#productos">
+        <a id="" href="/#productos">
           PRODUCTOS
         </a>
       </li>
       <li class="lh84" id="menublog">
-        <a href="{{ route('site.blog.index') }}">
+        <a id="" href="{{ route('site.blog.index') }}">
           BLOG
         </a>
       </li>
@@ -152,10 +152,10 @@
 <div class="navbar-fixed hide-on-large-only" >
   <nav class="z-depth-0" style="z-index: 4;" role="navigation" id="undernav-movil">
     <div class="nav-wrapper valign-wrapper ">
-      <a href="#" data-activates="mobile-demo" class="button-collapse ">
+      <a id="" href="#" data-activates="mobile-demo" class="button-collapse ">
         <i class="material-icons black-text" id="iconmenumovil">menu</i>
       </a>
-      <a href="Home">
+      <a id="" href="Home">
         <img class="brand-logo center menulogomovil" src="{{ asset('img/logo/logo.png') }}" class=" logonav" id="logocolormovil">
       </a>
 
@@ -168,22 +168,22 @@
 <ul class="side-nav collapsible" id="mobile-demo"  data-collapsible="accordion">
 @if (Route::currentRouteName() == 'site.index')
     <li><a onclick="toTop()" style="letter-spacing:1px">INICIO</a></li>
-    <li><a href="#productos" style="letter-spacing:1px">PRODUCTOS</a></li>
-    <li><a href="/blog" style="letter-spacing:1px">BLOG</a></li>
-    <li><a href="#cursos" style="letter-spacing:1px">CURSOS</a></li>
-    <li><a href="#contacto" style="letter-spacing:1px">CONTACTO</a></li>
+    <li><a id="" href="#productos" style="letter-spacing:1px">PRODUCTOS</a></li>
+    <li><a id="" href="/blog" style="letter-spacing:1px">BLOG</a></li>
+    <li><a id="" href="#cursos" style="letter-spacing:1px">CURSOS</a></li>
+    <li><a id="" href="#contacto" style="letter-spacing:1px">CONTACTO</a></li>
 @elseif (Route::currentRouteName() == 'site.blog.index')
-    <li><a href="/" style="letter-spacing:1px">INICIO</a></li>
-    <li><a href="/#productos" style="letter-spacing:1px">PRODUCTOS</a></li>
+    <li><a id="" href="/" style="letter-spacing:1px">INICIO</a></li>
+    <li><a id="" href="/#productos" style="letter-spacing:1px">PRODUCTOS</a></li>
     <li><a onclick="toTop()" style="letter-spacing:1px">BLOG</a></li>
-    <li><a href="/#cursos" style="letter-spacing:1px">CURSOS</a></li>
-    <li><a href="#contacto" style="letter-spacing:1px">CONTACTO</a></li>
+    <li><a id="" href="/#cursos" style="letter-spacing:1px">CURSOS</a></li>
+    <li><a id="" href="#contacto" style="letter-spacing:1px">CONTACTO</a></li>
 @elseif (Route::currentRouteName() == 'site.blog.article')
-    <li><a href="/" style="letter-spacing:1px">INICIO</a></li>
-    <li><a href="/#productos" style="letter-spacing:1px">PRODUCTOS</a></li>
-    <li><a href="/blog" style="letter-spacing:1px">BLOG</a></li>
-    <li><a href="/#cursos" style="letter-spacing:1px">CURSOS</a></li>
-    <li><a href="#contacto" style="letter-spacing:1px">CONTACTO</a></li>
+    <li><a id="" href="/" style="letter-spacing:1px">INICIO</a></li>
+    <li><a id="" href="/#productos" style="letter-spacing:1px">PRODUCTOS</a></li>
+    <li><a id="" href="/blog" style="letter-spacing:1px">BLOG</a></li>
+    <li><a id="" href="/#cursos" style="letter-spacing:1px">CURSOS</a></li>
+    <li><a id="" href="#contacto" style="letter-spacing:1px">CONTACTO</a></li>
 @endif
 </ul>
 <!-- End mobil navigation -->

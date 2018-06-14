@@ -63,7 +63,7 @@
         </div>
       </div>
     </a>
-    <a href="{{ $whats }}" target="_blank">
+    <a id="bannerwhats" href="{{ $whats }}" target="_blank">
     <div class="col s4" style="color:white;background-color:#80c357;padding-left:0">
       <div class="row nobottom valign-wrapper">
         <div class="col s10 offset-s1 m2 center" style="padding-right:0px">
@@ -98,8 +98,8 @@
               {{ $course->description }}
             </p>
             <div class="bottom-fixed center">
-              <a target="_blank" href="tel:4626071044"><i class="fa fa-phone fa-2x socialcourse" style="font-size:1.75em;padding-top:7px"></i></a>
-              <a target="_blank" href="{{ $course->whatsapp }}"><i class="fa fa-whatsapp fa-2x socialcourse" style="padding-top:3px"></i></a>
+              <a id="coursephone" target="_blank" href="tel:4626071044"><i class="fa fa-phone fa-2x socialcourse" style="font-size:1.75em;padding-top:7px"></i></a>
+              <a id="coursewhats" target="_blank" href="{{ $course->whatsapp }}"><i class="fa fa-whatsapp fa-2x socialcourse" style="padding-top:3px"></i></a>
             </div>
           </div>
         </div>
@@ -135,8 +135,8 @@
                   <span class="card-title white-text" style="font-size:15px">{{$product->name}}<i class="material-icons right">close</i></span>
                   <p class="center" style="font-size:13px">{{ $product->description }}.</p>
                   <div class="bottom-fixed center">
-                    <a target="_blank" href="tel:4626071044"><i class="fa fa-phone fa-2x socialproduct" style="font-size:1.75em;padding-top:7px"></i></a>
-                    <a target="_blank" href="{{ $product->whatsapp }}"><i class="fa fa-whatsapp fa-2x socialproduct" style="padding-top:3px"></i></a>
+                    <a id="productsphone" target="_blank" href="tel:4626071044"><i class="fa fa-phone fa-2x socialproduct" style="font-size:1.75em;padding-top:7px"></i></a>
+                    <a id="productswhats" target="_blank" href="{{ $product->whatsapp }}"><i class="fa fa-whatsapp fa-2x socialproduct" style="padding-top:3px"></i></a>
                   </div>
                 </div>
               </div>

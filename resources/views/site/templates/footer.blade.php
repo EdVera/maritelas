@@ -27,6 +27,88 @@
   </div>
 
 	<script type="text/javascript">
+
+    var bannerwhats = document.getElementById('bannerwhats');
+    bannerwhats.addEventListener(
+      'click',
+      function() {
+      fbq('track', 'Lead');
+      },
+      false
+    );
+
+    var coursephone = document.getElementById('coursephone');
+    coursephone.addEventListener(
+      'click',
+      function() {
+      fbq('track', 'Lead');
+      },
+      false
+    );
+
+    var coursewhats = document.getElementById('coursewhats');
+    coursewhats.addEventListener(
+      'click',
+      function() {
+      fbq('track', 'Lead');
+      },
+      false
+    );
+
+    var productsphone = document.getElementById('productsphone');
+    productsphone.addEventListener(
+      'click',
+      function() {
+      fbq('track', 'Lead');
+      },
+      false
+    );
+
+    var productswhats = document.getElementById('productswhats');
+    productswhats.addEventListener(
+      'click',
+      function() {
+      fbq('track', 'Lead');
+      },
+      false
+    );
+
+    var phonenav = document.getElementById('phonenav');
+    phonenav.addEventListener(
+      'click',
+      function() {
+      fbq('track', 'Lead');
+      },
+      false
+    );
+
+    var phonenavmobil = document.getElementById('phonenavmobil');
+    phonenavmobil.addEventListener(
+      'click',
+      function() {
+      fbq('track', 'Lead');
+      },
+      false
+    );
+
+    var mailnav = document.getElementById('mailnav');
+    mailnav.addEventListener(
+      'click',
+      function() {
+      fbq('track', 'Lead');
+      },
+      false
+    );
+
+    var mailnavmobil = document.getElementById('mailnavmobil');
+    mailnavmobil.addEventListener(
+      'click',
+      function() {
+      fbq('track', 'Lead');
+      },
+      false
+    );
+
 	  var phonelink = document.getElementById('phonelink');
 	  phonelink.addEventListener(
 	    'click',
@@ -65,15 +147,6 @@
 
 		var fblink = document.getElementById('fblink');
 	  fblink.addEventListener(
-	    'click',
-	    function() {
-		  fbq('track', 'Lead');
-	    },
-	    false
-	  );
-
-		var iglink = document.getElementById('iglink');
-	  iglink.addEventListener(
 	    'click',
 	    function() {
 		  fbq('track', 'Lead');
