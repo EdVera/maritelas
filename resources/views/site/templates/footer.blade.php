@@ -25,4 +25,87 @@
     <a href="#contacto" class="menu-link white-text">Contacto</a>
     @endif
   </div>
+
+	<script type="text/javascript">
+	  var phonelink = document.getElementById('phonelink');
+	  phonelink.addEventListener(
+	    'click',
+	    function() {
+		  fbq('track', 'Lead');
+	    },
+	    false
+	  );
+
+		var whatslink = document.getElementById('whatslink');
+	  whatslink.addEventListener(
+	    'click',
+	    function() {
+		  fbq('track', 'Lead');
+	    },
+	    false
+	  );
+
+		var whatslinkmini = document.getElementById('whatslinkmini');
+	  whatslinkmini.addEventListener(
+	    'click',
+	    function() {
+		  fbq('track', 'Lead');
+	    },
+	    false
+	  );
+
+		var maillink = document.getElementById('maillink');
+	  maillink.addEventListener(
+	    'click',
+	    function() {
+		  fbq('track', 'Lead');
+	    },
+	    false
+	  );
+
+		var fblink = document.getElementById('fblink');
+	  fblink.addEventListener(
+	    'click',
+	    function() {
+		  fbq('track', 'Lead');
+	    },
+	    false
+	  );
+
+		var iglink = document.getElementById('iglink');
+	  iglink.addEventListener(
+	    'click',
+	    function() {
+		  fbq('track', 'Lead');
+	    },
+	    false
+	  );
+
+		var phlink = document.getElementById('phlink');
+	  phlink.addEventListener(
+	    'click',
+	    function() {
+		  fbq('track', 'Lead');
+	    },
+	    false
+	  );
+
+		var emlink = document.getElementById('emlink');
+	  emlink.addEventListener(
+	    'click',
+	    function() {
+		  fbq('track', 'Lead');
+	    },
+	    false
+	  );
+
+		var maillink = document.getElementById('maillink');
+	  maillink.addEventListener(
+	    'click',
+	    function() {
+		  fbq('track', 'Lead');
+	    },
+	    false
+	  );
+	</script>
 </footer>

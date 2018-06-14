@@ -53,100 +53,18 @@
 
 		@yield('body-content')
 
-		@include('site.templates.footer')
-
-		<!--  Start [CSS]-->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" async>
-		<!--  End [CSS]-->
-
-		<!--  Scripts-->
-		<script src="{{ asset('plugins/jquery/jquery2.min.js') }}"></script>
-		<script src="{{ asset('plugins/materialize/js/materialize.min.js') }}"></script>
-		<script src="{{ asset('js/init.js') }}"></script>
-		<script src="{{ asset('plugins/slick/slick.js') }}"></script>
-		<script src="{{ asset('js/initslick.js') }}"></script>
-		<script type="text/javascript">
-		  var phonelink = document.getElementById('phonelink');
-		  phonelink.addEventListener(
-		    'click',
-		    function() {
-			  fbq('track', 'Lead');
-		    },
-		    false
-		  );
-
-			var whatslink = document.getElementById('whatslink');
-		  whatslink.addEventListener(
-		    'click',
-		    function() {
-			  fbq('track', 'Lead');
-		    },
-		    false
-		  );
-
-			var whatslinkmini = document.getElementById('whatslinkmini');
-		  whatslinkmini.addEventListener(
-		    'click',
-		    function() {
-			  fbq('track', 'Lead');
-		    },
-		    false
-		  );
-
-			var maillink = document.getElementById('maillink');
-		  maillink.addEventListener(
-		    'click',
-		    function() {
-			  fbq('track', 'Lead');
-		    },
-		    false
-		  );
-
-			var fblink = document.getElementById('fblink');
-		  fblink.addEventListener(
-		    'click',
-		    function() {
-			  fbq('track', 'Lead');
-		    },
-		    false
-		  );
-
-			var iglink = document.getElementById('iglink');
-		  iglink.addEventListener(
-		    'click',
-		    function() {
-			  fbq('track', 'Lead');
-		    },
-		    false
-		  );
-
-			var phlink = document.getElementById('phlink');
-		  phlink.addEventListener(
-		    'click',
-		    function() {
-			  fbq('track', 'Lead');
-		    },
-		    false
-		  );
-
-			var emlink = document.getElementById('emlink');
-		  emlink.addEventListener(
-		    'click',
-		    function() {
-			  fbq('track', 'Lead');
-		    },
-		    false
-		  );
-
-			var maillink = document.getElementById('maillink');
-		  maillink.addEventListener(
-		    'click',
-		    function() {
-			  fbq('track', 'Lead');
-		    },
-		    false
-		  );
-		</script>
-		@yield('addScripts')
 	</body>
+	@include('site.templates.footer')
+
+	<!--  Start [CSS]-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" async>
+	<!--  End [CSS]-->
+
+	<!--  Scripts-->
+	<script src="{{ asset('plugins/jquery/jquery2.min.js') }}"></script>
+	<script src="{{ asset('plugins/materialize/js/materialize.min.js') }}"></script>
+	<script src="{{ asset('js/init.js') }}"></script>
+	<script src="{{ asset('plugins/slick/slick.js') }}"></script>
+	<script src="{{ asset('js/initslick.js') }}"></script>
+	@yield('addScripts')
 </html>
