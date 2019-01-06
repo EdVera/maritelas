@@ -54,7 +54,7 @@ class ArticlesController extends Controller
       }
 
       if ($request->hasFile('imgmini')) {
-        $name = 'imgmini_'. $aux . time() . '.' . $request->cover->getClientOriginalExtension();
+        $name = 'imgmini_'. $aux . time() . '.' . $request->imgmini->getClientOriginalExtension();
         $request->imgmini->move($path, $name);
         $article->imgmini = $name;
       }
@@ -131,7 +131,7 @@ class ArticlesController extends Controller
       }
 
       if ($request->hasFile('imgmini')) {
-        $name = 'imgmini_'. $aux . time() . '.' . $request->cover->getClientOriginalExtension();
+        $name = 'imgmini_'. $aux . time() . '.' . $request->imgmini->getClientOriginalExtension();
         $request->imgmini->move($path, $name);
         $article->imgmini = $name;
       }
