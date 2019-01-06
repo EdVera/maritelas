@@ -17,7 +17,7 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        $articles = Article::all();
+        $articles = Article::orderBy('position')->get();
         return view('admin.articles.index')->with('articles',$articles);
     }
 
@@ -41,12 +41,11 @@ class ArticlesController extends Controller
     {
       $aux = 0;
       $path = public_path() . '/img/articles/';
-
       $article = new Article($request->all());
       $slug = Str::slug($article->title);
       $article->slug = $slug;
       $article->text = str_replace("\n","<br>", $article->text);
-
+      $article->position = $request->position;
       if ($request->hasFile('cover')) {
         $name = 'cover_'. $aux . time() . '.' . $request->cover->getClientOriginalExtension();
         $request->cover->move($path, $name);
@@ -58,7 +57,6 @@ class ArticlesController extends Controller
         $request->imgmini->move($path, $name);
         $article->imgmini = $name;
       }
-
       $article->save();
 
       if ($request->hasFile('images')) {
@@ -119,6 +117,7 @@ class ArticlesController extends Controller
 
       $article = Article::find($id);
       $article->title = $request->title;
+      $article->position = $request->position;
       $article->description = $request->description;
       $article->text = $request->text;
       $article->text = str_replace("\n","<br>", $article->text);

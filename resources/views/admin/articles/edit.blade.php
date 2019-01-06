@@ -6,7 +6,7 @@
 
   <div class="row">
     <div class="col s9">
-      <caption><h4>Nuevo artículo</h4></caption>
+      <caption><h4>Editar artículo</h4></caption>
     </div>
   </div>
 
@@ -23,6 +23,13 @@
       <div class="input-field col s12 m10 offset-m1">
         {!! Form::label('title', 'Título del artículo') !!}
         {!! Form::text('title',$article->title,['class' => 'validate',  'required' => 'required']) !!}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12 m10 offset-m1">
+        {!! Form::label('position', 'Posición del artículo') !!}
+        {!! Form::text('position',$article->position,['class' => 'validate',  'required' => 'required']) !!}
       </div>
     </div>
 

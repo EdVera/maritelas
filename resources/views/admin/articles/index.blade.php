@@ -23,6 +23,7 @@
   				<th>Foto</th>
           <th>Artículo</th>
   				<th>Descripción</th>
+  				<th>Posición</th>
   				<th>Acción</th>
   			</tr>
   		</thead>
@@ -34,6 +35,7 @@
 					</td>
   				<td>{{ $article->title }}</td>
           <td>{{ $article->description }}</td>
+          <td>{{ $article->position }}</td>
   				<td>
 						<a href="{{ route('articles.edit', $article->id) }}" class="btn yellow darken-1"><i class="material-icons">edit</i></a>
   					<a href="{{ route('articles.destroy', $article->id) }}" class="btn red lighten-1"><i class="material-icons">delete</i></a>

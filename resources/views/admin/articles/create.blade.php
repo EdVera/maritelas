@@ -22,6 +22,13 @@
     </div>
 
     <div class="row">
+      <div class="input-field col s12 m10 offset-m1">
+        {!! Form::label('position', 'Posición del artículo') !!}
+        {!! Form::text('position',null,['class' => 'validate',  'required' => 'required']) !!}
+      </div>
+    </div>
+
+    <div class="row">
       <div class="file-field input-field col s12 m10 offset-m1">
         <div class="btn blue">
           <span>Home</span>
