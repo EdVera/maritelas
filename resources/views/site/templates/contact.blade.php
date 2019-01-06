@@ -16,7 +16,7 @@
         <div class="col s12 m6">
           <div class="row valign-wrapper nobottom">
             <div class="col s3 m2" style="padding:0"><i class="fa fa-envelope-o right" aria-hidden="true" style="font-size: 33px;color:#5d5d5d"></i></div>
-            <div class="col s9 m10 left-align" style="padding-left:0">
+            <div class="col s9 m10 left-align" style="padding-left:10">
               <p class="nobottom notop" style="color:#f3357f;font-size:18px;font-weight:900">ESCRÍBENOS <br>
                 <a id="maillink" target="_blank" style="color:#5d5d5d;font-weight:100;font-size:13px" href="mailto:direccion-comercial@gp.org.mx?Subject=Requiero"> contacto@maritelascountry.mx</a></p>
             </div>
