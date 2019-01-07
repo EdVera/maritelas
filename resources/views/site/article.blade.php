@@ -37,7 +37,7 @@
     <div class="section slider-for">
       @foreach ($article->images as $image)
         <div>
-          <img src="{{ asset('img/articles/' . $image->name)}}" style="width:60%;margin:auto">
+          <img src="{{ asset('img/articles/' . $image->name)}}" style="width:40%;margin:auto">
         </div>
       @endforeach
     </div>
@@ -45,7 +45,7 @@
     <div class="section slider-nav">
       @foreach ($article->images as $image)
         <div>
-          <img src="{{ asset('img/articles/' . $image->name)}}" style="width:90%;margin:auto">
+          <img src="{{ asset('img/articles/' . $image->name)}}" style="width:60%;margin:auto">
         </div>
       @endforeach
     </div>
