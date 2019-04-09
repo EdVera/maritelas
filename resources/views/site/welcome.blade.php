@@ -30,8 +30,12 @@
 <div id="slider">
   @foreach ($covers as $cover)
     <div style="height:67vh;background-image: url('{{ asset('img/slider/'.$cover->name) }}'); background-size:cover">
-      <h1 class="center" style="">{{ $cover->title }}</h1>
-      <h3 class="center" style="">{{ $cover->subtitle }}</h3>
+      @if ($cover->title != '-')
+        <h1 class="center" style="">{{ $cover->title }}</h1>
+      @endif
+      @if ($cover->subtitle != '-')
+        <h3 class="center" style="">{{ $cover->subtitle }}</h3>
+      @endif
     </div>
   @endforeach
 </div>

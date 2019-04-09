@@ -23,6 +23,7 @@
           </div>
         </div>
       </div>
+      {{-- Contact Form --}}
       <div class="row" id="contactform" style="padding:0 23px">
         <form id="form2">
           <div class="row nobottom">

@@ -47,7 +47,7 @@
 		<script src="{{ asset('plugins/fontawesome/fontawesome.min.js') }}"></script>
 		@yield('addCSS')
 	</head>
-	<body class"hola"> 
+	<body class="hola"> 
 
 		@include('site.templates.nav')
 
