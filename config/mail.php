@@ -17,7 +17,7 @@ return [
     */
 
     'driver' => env('MAIL_DRIVER', 'smtp'),
-    'host' => env('MAIL_HOST', 'smtp.googlemail.com'),
+    'host' => env('MAIL_HOST', 'smtp.gmail.com'),
     'port' => env('MAIL_PORT', 465),
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'maritelascountrymx@gmail.com'),
