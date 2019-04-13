@@ -25,31 +25,31 @@
       </div>
       {{-- Contact Form --}}
       <div class="row" id="contactform" style="padding:0 23px">
-        <form id="form2">
+        {!! Form::open(['route' => 'contact.contact', 'id' => 'form-contact', 'method' => 'POST']) !!}
           <div class="row nobottom">
             <div class="input-field col s6">
-              <input name="name" placeholder="* Nombre" type="text" style="padding-left:5px;" required="">
+              <input name="contact[name]" placeholder="* Nombre" type="text" style="padding-left:5px;" required="">
             </div>
             <div class="input-field col s6">
-              <input name="enterprise" placeholder="* Apellído" type="text" style="padding-left:5px;" required="">
+              <input name="contact[lastName]" placeholder="* Apellído" type="text" style="padding-left:5px;" required="">
             </div>
           </div>
           <div class="row nobottom">
             <div class="input-field col s6">
-              <input class="validate" name="email" placeholder="* Correo electrónico" type="email" style="padding-left:5px;" required="">
+              <input class="validate" name="contact[email]" placeholder="* Correo electrónico" type="email" style="padding-left:5px;" required="">
             </div>
             <div class="input-field col s6">
-              <input name="phone" placeholder="* Teléfono" type="text" style="padding-left:5px;" required="">
+              <input name="contact[phone]" placeholder="* Teléfono" type="text" style="padding-left:5px;" required="">
             </div>
           </div>
           <div class="row nobottom">
             <div class="input-field col s12">
-              <input name="message" placeholder="* Mensaje" type="text" style="padding-left:5px;" required="">
+              <input name="contact[message]" placeholder="* Mensaje" type="text" style="padding-left:5px;" required="">
             </div>
           </div>
           <div class="row">
             <div class="col s12 m6 input-field but" style="padding-right:0px">
-              <button class="btn-flat transparent" type="submit" style="width:100%;color:#f3357f;font-weight:100;border:1px solid #f3357f; padding: 2px 2px;height:50px;font-size:20px;font-weight:900">¡ENVIAR!</button>
+              {!! Form::submit('¡ENVIAR!',['class' => 'btn-flat transparent', 'style' => 'width:100%;color:#f3357f;font-weight:100;border:1px solid #f3357f; padding: 2px 2px;height:50px;font-size:20px;font-weight:900']) !!}
             </div>
             <div class="col s12 m6 hide-on-med-and-down" style="margin-top:14px;padding-right:0px">
               <a id="whatslink" target="_blank" href="{{ $whats }}">
@@ -76,12 +76,13 @@
               </a>
             </div>
           </div>
-        </form>
+        {!! Form::close() !!}
       </div>
     </div>
+    {{-- MAPAS --}}
     <div class="col s12 m12 l6" id="wrapper">
       <div id="google_map">
-        <iframe id="qro" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14934.03202158524!2d-100.44111977562712!3d20.648901508596094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDM4JzU2LjAiTiAxMDDCsDI1JzU2LjUiVw!5e0!3m2!1ses!2smx!4v1523416643375" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe id="qro" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1867.173473575692!2d-100.389456641952!3d20.61471039655604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d35b18951ac631%3A0xaf3478a208390d1!2sPlaza+Boulevares!5e0!3m2!1ses!2smx!4v1554993321609!5m2!1ses!2smx" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
         <iframe id="irapuato" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.951745061328!2d-101.37423878539242!3d20.67154210525353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842c7fb4b3a75dc5%3A0xd05f16c502b4458d!2sPlaza+Jacarandas!5e0!3m2!1ses!2smx!4v1523416722510" width="100%" height="500" frameborder="0" style="border:0;display:none" allowfullscreen></iframe>
       </div>
       <div class="row notop" id="over_map" style="padding: 0 0.75em;">
@@ -91,7 +92,7 @@
             <li onclick="mapQro()" style="border:none">
               <div class="collapsible-header active transparent center maptitle"><h5 class="center-align">QUERÉTARO</h5></div>
               <div class="collapsible-body transparent center" style="border:none;padding:2px">
-                Plaza Urban Center Jurica, Av. 5 de Febrero #9200, Local G-1, 1er Piso Pasillo Cinemex, Jurica, 76100, Santiago de Querétaro, Qro. 442.688.5346
+                Plaza Boulevares, Local PB-36, Boulevard Bernardo Quintana 4100 y, Prol. Corregidora Nte. 306, Alamos 3ra Secc, 76160 Santiago de Querétaro, Qro.
               </div>
             </li>
           </ul>

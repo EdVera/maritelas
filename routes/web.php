@@ -19,6 +19,11 @@ Route::group(['as' => 'site.'], function () {
 			'as' 	=>	'index'
 		]);
 
+	// Route::get('/correo', [
+	// 	'uses'	=> 	'HomeController@correoTest',
+	// 	'as' 	=>	'correoTest'
+	// ]);
+
 	Route::group(['prefix' => 'blog', 'as' => 'blog.'], function () {
 
 			Route::get('/', [
@@ -30,7 +35,6 @@ Route::group(['as' => 'site.'], function () {
 					'uses' 	=> 	'HomeController@article',
 					'as'	  => 	'article'
 				]);
-
 	});
 
 		/*Route::get('/Mail', function () {
@@ -84,14 +88,9 @@ Route::group(['prefix' => 'admin'], function() {
 
 });
 
-// Route::group(['prefix' => 'contact', 'as' => 'contact.'], function () {
-//   Route::post('/reservs', [
-//     'uses'  => 'ReservsController@reservations',
-//     'as'    => 'reservs'
-//   ]);
-//   /* Para probar envíos - En el controller también hay un método test */
-//   Route::post('/test', [
-//     'uses'  => 'Contact@test',
-//     'as'    => 'test'
-//   ]);
-// });
+Route::group(['prefix' => 'contact', 'as' => 'contact.'], function () {
+  Route::post('/', [
+    'uses'  => 'Contact@contact',
+    'as'    => 'contact'
+  ]);
+});

@@ -31,11 +31,7 @@ class HomeController extends Controller
         ->with('articles',$articles);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function blog()
     {
       $articles = Article::all();
@@ -45,12 +41,7 @@ class HomeController extends Controller
         ->with('articles',$articles);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+   
     public function article($slug)
     {
       $article = Article::where('slug','=', $slug)->firstOrFail();
@@ -58,35 +49,19 @@ class HomeController extends Controller
       return view('site.article')->with('article',$article);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    
+    public function correoTest()
     {
-        //
+        return view('site.emails.contact');
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function update(Request $request, $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function destroy($id)
     {
         //
