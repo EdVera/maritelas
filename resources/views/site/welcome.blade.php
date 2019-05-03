@@ -126,10 +126,11 @@
         @php
           $j=0;
           $i=0;
+          $totalproducts = 0;
         @endphp
         @foreach ($products as $product)
           @if ($i<4)
-            <div class="col s10 offset-s1 m3" >
+            <div class="col s10 offset-s1 m3">
               <div class="card z-depth-4">
                 <div class="card-image activator waves-effect waves-block waves-light">
                   <img src="{{ asset('img/products/' . $product->image) }}" style="height:35vh">
@@ -146,11 +147,16 @@
               </div>
             </div>
             @if($i==3)
+              @php
+                  $totalproducts++;
+              @endphp
               @if ($j==1)
               </div>
                 </div>
-                <div class="" style="margin-top:38px">
-                  <div class="row">
+                @if (count($products) != $totalproducts)
+                  <div class="" style="margin-top:38px">
+                    <div class="row">
+                @endif
                   @php
                     $i=0;
                     $j=0;
@@ -165,6 +171,7 @@
               @endif
             @else
               @php
+                $totalproducts++;
                 $i++;
               @endphp
             @endif
